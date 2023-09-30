@@ -14,11 +14,11 @@ const Works = () => {
       <ContainerTitleStyle>
         <TitleBlockStyle>
         <TitleStyle>
-          <MarkedSymbolStyle>#</MarkedSymbolStyle>projects
+          <MarkedSymbolStyle>#</MarkedSymbolStyle>проекты
         </TitleStyle>
         <LineTitleStyle/>
         </TitleBlockStyle>
-        <LinkViewAllStyle>{'View all ~~>'}</LinkViewAllStyle>
+        <LinkViewAllStyle>{'Все проекты ~~>'}</LinkViewAllStyle>
       </ContainerTitleStyle>
       <ListWorksStyle>
         <Work/>

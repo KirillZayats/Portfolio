@@ -28,7 +28,7 @@ const Work = () => {
     <ContainerInfoStyle>
       <TitleWorkStyle>ChertNodes</TitleWorkStyle>
       <TextStyle>Minecraft servers hosting</TextStyle>
-      <ButtonStyle>Open</ButtonStyle>
+      <ButtonStyle>Открыть</ButtonStyle>
     </ContainerInfoStyle>
   </ElementListStyle>
   )

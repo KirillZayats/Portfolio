@@ -17,7 +17,7 @@ const Skills = () => {
     <SkillsStyle>
       <TitleBlockStyle>
         <TitleStyle>
-          <MarkedSymbolStyle>#</MarkedSymbolStyle>skills
+          <MarkedSymbolStyle>#</MarkedSymbolStyle>умения
         </TitleStyle>
         <LineTitleStyle />
       </TitleBlockStyle>

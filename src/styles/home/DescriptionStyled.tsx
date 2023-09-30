@@ -12,7 +12,11 @@ const DescriptionStyle = styled.section`
 const ContainerInformationStyle = styled.div`
     display: flex;
     flex-direction: column;
-    
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto; 
+    justify-content: center;
+    align-items: center;
 `;
 
 const TitleStyle = styled.h1`
@@ -30,17 +34,7 @@ color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
 margin: 32px 0 24px;
 `;
 
-const ContainerPhotoStyle = styled.div`
-width: 456px;
-background: #000;
-
-`;
-
-const PhotoStyle = styled.img``;
-
 export {
-    PhotoStyle,
-    ContainerPhotoStyle,
     TextDescriptionStyle,
     TitleStyle,
     ContainerInformationStyle,

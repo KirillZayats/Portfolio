@@ -5,6 +5,7 @@ import {
   TitleBlockStyle,
   LineTitleStyle,
   ButtonStyle,
+  NewLineStyle,
 } from "../../styles/AppStyled";
 import {
   PhotoImageStyle,
@@ -12,6 +13,7 @@ import {
   ContainerPhotoImageStyle,
   TextStyle,
   AboutMeStyle,
+  ContainerTextStyle,
 } from "../../styles/aboutMe/AboutMeStyled";
 
 const AboutMe = () => {
@@ -20,19 +22,24 @@ const AboutMe = () => {
       <ContainerInfoMeStyle>
         <TitleBlockStyle>
           <TitleStyle>
-            <MarkedSymbolStyle>#</MarkedSymbolStyle>about me
+            <MarkedSymbolStyle>#</MarkedSymbolStyle>обо мне
           </TitleStyle>
           <LineTitleStyle />
         </TitleBlockStyle>
-        <TextStyle>
-          Hello, i’m Elias! I’m a self-taught front-end developer based in Kyiv,
-          Ukraine. I can develop responsive websites from scratch and raise them
-          into modern user-friendly web experiences. Transforming my creativity
-          and knowledge into a websites has been my passion for over a year. I
-          have been helping various clients to establish their presence online.
-          I always strive to learn about the newest technologies and frameworks.
-        </TextStyle>
-        <ButtonStyle>{"Read more ->"}</ButtonStyle>
+        <ContainerTextStyle>
+          <TextStyle>
+            Я front-end разработчик из Беларуси. По профессии
+            Инженер-программист. Имею опыт больше года  в разработке
+            проектов малой и средней сложности. Я человек не конфликтный. Умею
+            работать в команде и легко начинаю диалог.
+          </TextStyle>
+          <TextStyle>
+            В ближайшее время планирую подтягивать свой английский язык до
+            уровня B1-B2 и изучать новые технологии в сфере Front-end.
+          </TextStyle>
+          <TextStyle>Через 3-4 года вижу себя Middle разработчиком.</TextStyle>
+        </ContainerTextStyle>
+        <ButtonStyle>{"Узнать больше"}</ButtonStyle>
       </ContainerInfoMeStyle>
       <ContainerPhotoImageStyle>
         <PhotoImageStyle />

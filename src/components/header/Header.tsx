@@ -3,26 +3,19 @@ import { LINKS_NAV } from '../../additionally/constants';
 import ElementList from './ElementList';
 
 import {
-  Iconlogotype, 
   ContainerStyle, 
-  ContainerLogotypeStyle, 
   HeaderStyle,
   NavStyle, 
   ListNavStyle, 
-  NameLogotypeStyle
-} from '../../styles/header/HeaderStyled'
+} from '../../styles/header/HeaderStyled';
+import Logotype from '../Logotype';
 
 const Header: React.FC = () => {
 
   return (
     <HeaderStyle>
       <ContainerStyle>
-        <ContainerLogotypeStyle>
-          <Iconlogotype />
-          <NameLogotypeStyle>
-            Заяц Кирилл
-          </NameLogotypeStyle>
-        </ContainerLogotypeStyle>
+        <Logotype/>
         <NavStyle>
           <ListNavStyle>
             {

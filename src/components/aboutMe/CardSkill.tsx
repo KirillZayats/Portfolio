@@ -10,7 +10,7 @@ const CardSkill = () => {
     const type = ['erge', 'erge','erge','erge','erge','erge','erge','erge',]
   return (
     <CardSkillStyle>
-      <NameContainerStyle>Frameworks</NameContainerStyle>
+      <NameContainerStyle>Библиотеки</NameContainerStyle>
       <ListElementsStyle>
         {type.map((element, index) => (<ElementListStyle key={index}>{element}</ElementListStyle>))}
       </ListElementsStyle>

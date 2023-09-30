@@ -13,6 +13,13 @@ const ContainerInfoMeStyle = styled.div`
   flex-direction: column;
   gap: 30px;
 `;
+
+const ContainerTextStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
 const TextStyle = styled.p`
   font-size: 16px;
   font-style: normal;
@@ -33,5 +40,6 @@ export {
     ContainerInfoMeStyle,
     ContainerPhotoImageStyle,
     TextStyle,
-    AboutMeStyle
+    AboutMeStyle,
+    ContainerTextStyle
 }

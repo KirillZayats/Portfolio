@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  PhotoStyle,
-  ContainerPhotoStyle,
   TextDescriptionStyle,
   TitleStyle,
   ContainerInformationStyle,
@@ -16,12 +14,9 @@ const Description: React.FC = () => {
         <TitleStyle>
           Привет! Меня зовут Кирилл и я <MarkedSymbolStyle>Front-end</MarkedSymbolStyle> разработчик
         </TitleStyle>
-        <TextDescriptionStyle>Придумать текст</TextDescriptionStyle>
-        <ButtonStyle>Напиши мне !!!</ButtonStyle>
+        <TextDescriptionStyle>Воплощаю ваши идеи в реальность!!!</TextDescriptionStyle>
+        <ButtonStyle>Написать</ButtonStyle>
       </ContainerInformationStyle>
-      <ContainerPhotoStyle>
-        <PhotoStyle />
-      </ContainerPhotoStyle>
     </DescriptionStyle>
   );
 };
