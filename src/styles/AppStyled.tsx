@@ -32,6 +32,42 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const MarkedSymbolStyle = styled.span`
+  color: ${({ theme }) => theme.colors.MARKER_COLOR};
+`;
+
+const TitleStyle = styled.h2`
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+`;
+const LineTitleStyle = styled.div`
+  width: 240px;
+  height: 2px;
+  background: ${({ theme }) => theme.colors.MARKER_COLOR};
+`;
+
+const TitleBlockStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+`;
+
+const ButtonStyle = styled.button`
+    border: 1px solid ${({ theme }) => theme.colors.MARKER_COLOR};
+    width: 148px;
+    height: 37px;
+    background: inherit;
+    color: ${({ theme }) => theme.colors.TEXT_COLOR};
+`;
+
 export {
-  GlobalStyle
-}
+  GlobalStyle,
+  MarkedSymbolStyle,
+  TitleStyle,
+  TitleBlockStyle,
+  LineTitleStyle,
+  ButtonStyle
+};

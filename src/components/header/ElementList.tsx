@@ -1,8 +1,9 @@
 import React from 'react'
 import { PropsElementList } from '../../additionally/interfaces';
 import {
-    MarkedSymbolStyle, LinkNavStyle, ElementListStyle
+    LinkNavStyle, ElementListStyle
 } from "../../styles/header/ElementList"
+import { MarkedSymbolStyle } from '../../styles/AppStyled';
 
 const ElementList: React.FC<PropsElementList> = ({ textElement }) => {
     return (

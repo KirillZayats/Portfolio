@@ -8,10 +8,7 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 `;
-const MarkedSymbolStyle = styled.span`
-    color: ${({ theme }) => theme.colors.MARKER_COLOR};
-`;
 
 export {
-    MarkedSymbolStyle, LinkNavStyle, ElementListStyle
+    LinkNavStyle, ElementListStyle
 }
