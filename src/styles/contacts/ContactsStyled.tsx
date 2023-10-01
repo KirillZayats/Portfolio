@@ -5,7 +5,7 @@ const ContactsStyle = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 60px 0;
+  /* padding: 60px 0; */
   gap: 45px;
 `;
 

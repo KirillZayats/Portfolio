@@ -4,7 +4,7 @@ const SkillsStyle = styled.section`
     display: flex;
     flex-direction: column;
     gap: 45px;
-    padding: 60px 0;
+    /* padding: 60px 0; */
 `;
 const ContainerContentStyle = styled.div`
     display: flex;

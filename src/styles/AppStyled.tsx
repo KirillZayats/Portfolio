@@ -156,7 +156,49 @@ const IconGithub: React.FC<React.SVGProps<SVGSVGElement>> = ({ className }) => (
 const NewLineStyle = styled.br``;
 
 
+const ContainerHomePageStyle = styled.main`
+  width: 1060px;
+  background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
+  margin: 0 auto;
+  padding: 121px 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 105px;
+`;
+const ContainerPageStyle = styled.main`
+  width: 1060px;
+  background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
+  margin: 0 auto;
+  padding: 120px 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+`;
+
+const SubTitleStyle = styled.div`
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
+`;
+
+const ContainerTitlePageStyle = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+`;
+
+const ContainerBlockColumnStyle = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
+
 export {
+  SubTitleStyle,
+  ContainerTitlePageStyle,
+  ContainerBlockColumnStyle,
   GlobalStyle,
   MarkedSymbolStyle,
   TitleStyle,
@@ -171,5 +213,7 @@ export {
   IconEmail,
   IconLinkedin,
   IconGithub,
-  NewLineStyle
+  NewLineStyle,
+  ContainerHomePageStyle,
+  ContainerPageStyle
 };

@@ -35,6 +35,7 @@ const ContainerInfoStyle = styled.div`
 `;
 const ElementTechnologyStyle = styled.li``;
 
+const CardStyle = styled.article``;
 export {
     ContainerInfoStyle,
     TextStyle,
@@ -43,4 +44,5 @@ export {
     ListTechnologyStyle,
     ImageWorkStyle,
     TitleWorkStyle,
+    CardStyle
 }

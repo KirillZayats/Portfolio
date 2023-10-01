@@ -1,10 +1,10 @@
 import { styled } from "styled-components";
 
 const WorksStyle = styled.section`
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-    padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  /* padding: 60px 0; */
 `;
 const ContainerTitleStyle = styled.div`
   display: flex;
@@ -23,7 +23,8 @@ const ListWorksStyle = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: left;
+  gap: 31px;
 `;
 const ElementListStyle = styled.li`
   border: 1px solid ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
@@ -67,15 +68,15 @@ const ContainerInfoStyle = styled.div`
 const ElementTechnologyStyle = styled.li``;
 
 export {
-    WorksStyle,
-    ContainerInfoStyle,
-    ContainerTitleStyle,
-    ElementListStyle,
-    ElementTechnologyStyle,
-    ListTechnologyStyle,
-    ListWorksStyle,
-    ButtonOpenStyle,
-    ImageWorkStyle,
-    TitleWorkStyle,
-    LinkViewAllStyle,
-}
+  WorksStyle,
+  ContainerInfoStyle,
+  ContainerTitleStyle,
+  ElementListStyle,
+  ElementTechnologyStyle,
+  ListTechnologyStyle,
+  ListWorksStyle,
+  ButtonOpenStyle,
+  ImageWorkStyle,
+  TitleWorkStyle,
+  LinkViewAllStyle,
+};

@@ -5,7 +5,6 @@ import {
   TitleBlockStyle,
   LineTitleStyle,
   ButtonStyle,
-  NewLineStyle,
 } from "../../styles/AppStyled";
 import {
   PhotoImageStyle,

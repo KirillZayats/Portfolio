@@ -14,7 +14,7 @@ const HeaderStyle = styled.header`
 `;
 
 const ContainerStyle = styled.div`
-  width: 1024px;
+  width: 1060px;
   background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
   display: flex;
   justify-content: space-between;

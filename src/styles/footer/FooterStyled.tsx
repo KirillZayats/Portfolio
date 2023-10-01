@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 const ContainerStyle = styled.div`
-  width: 1024px;
+  width: 1060px;
   background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
   display: flex;
   flex-direction: column;

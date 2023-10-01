@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-const CardSkillStyle = styled.div`
+const CardSkillStyle = styled.article`
   max-width: 180px;
   width: 100%;
   border: 1px solid ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};

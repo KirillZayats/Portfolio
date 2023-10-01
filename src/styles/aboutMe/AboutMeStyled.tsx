@@ -4,7 +4,6 @@ const AboutMeStyle = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 60px 0;
 `;
 
 const ContainerInfoMeStyle = styled.div`
