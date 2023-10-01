@@ -18,7 +18,6 @@ const App: React.FC = () => {
         <Route path={`/works`} element={<Works />} />
         <Route path={`/aboutme`} element={<AboutMe />} />
       </Routes>
-      <AboutMe />
       <Footer />
     </Theme>
   );

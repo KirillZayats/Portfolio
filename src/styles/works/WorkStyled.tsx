@@ -1,10 +1,39 @@
 import { styled } from "styled-components";
+import { device, size } from "../media/MediaQueryStyled";
 
 const ElementListStyle = styled.li`
   border: 1px solid ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
-  width: 330px;
+
+  @media ${device.mobileS} {
+    max-width: 100%;
+  }
 `;
-const ImageWorkStyle = styled.img``;
+
+const ImageWorkStyle = styled.img`
+  @media ${device.mobileS} {
+    width: 100%;
+  }
+
+  @media ${device.mobileM} {
+    width: calc(${size.mobileM} - 32px);
+  }
+
+  @media ${device.mobileL} {
+    width: calc(${size.mobileL} - 52px);
+  }
+
+  @media ${device.tablet} {
+   width: 330px;
+  }
+
+  @media ${device.laptop} {
+   width: 300px;
+  }
+
+  @media ${device.desktop} {
+   width: 340px;
+  }
+`;
 const TitleWorkStyle = styled.h4`
   font-size: 24px;
   font-style: normal;

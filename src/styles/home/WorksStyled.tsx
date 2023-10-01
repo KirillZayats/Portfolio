@@ -1,10 +1,16 @@
 import { styled } from "styled-components";
+import { device, size } from "../media/MediaQueryStyled";
 
 const WorksStyle = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 45px;
-  /* padding: 60px 0; */
+  @media ${device.mobileS} {
+    gap: 30px;
+  }
+
+  @media ${device.tablet} {
+    gap: 45px;
+  }
 `;
 const ContainerTitleStyle = styled.div`
   display: flex;
@@ -17,14 +23,20 @@ const LinkViewAllStyle = styled.a`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  padding: 8px;
 `;
 
 const ListWorksStyle = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left;
-  gap: 31px;
+  @media ${device.mobileS} {
+    gap: 30px;
+  }
+
+  @media ${device.tablet} {
+    justify-content: space-between;
+  }
 `;
 const ElementListStyle = styled.li`
   border: 1px solid ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
@@ -67,7 +79,29 @@ const ContainerInfoStyle = styled.div`
 `;
 const ElementTechnologyStyle = styled.li``;
 
+const ContainerLinkUpStyle = styled.div`
+    @media ${device.mobileS} {
+      display: none;
+  }
+
+  @media ${device.tablet} {
+    display: block;
+  }
+`;
+const ContainerLinkDownStyle = styled.div`
+  @media ${device.mobileS} {
+    display: block;
+    text-align: center;
+  }
+
+  @media ${device.tablet} {
+    display: none;
+  }
+`;
+
 export {
+  ContainerLinkDownStyle,
+  ContainerLinkUpStyle,
   WorksStyle,
   ContainerInfoStyle,
   ContainerTitleStyle,

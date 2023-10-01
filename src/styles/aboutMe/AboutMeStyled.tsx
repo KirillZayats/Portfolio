@@ -1,16 +1,40 @@
 import { styled } from "styled-components";
+import { device, size } from "../media/MediaQueryStyled";
 
 const AboutMeStyle = styled.section`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+  @media ${device.mobileS} {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const ContainerInfoMeStyle = styled.div`
-  width: 515px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media ${device.mobileS} {
+    width: 100%;
+  }
+
+  @media ${device.tablet} {
+    width: 430px;
+  }
+
+  @media ${device.tabletS} {
+    width: 515px;
+  }
+
+  @media ${device.desktop} {
+    width: 715px;
+  }
 `;
 
 const ContainerTextStyle = styled.div`
@@ -25,14 +49,50 @@ const TextStyle = styled.p`
   font-weight: 400;
   line-height: 26px;
   color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
+
+  @media ${device.mobileS} {
+    font-size: 14px;
+
+  }
+
+  @media ${device.tabletS} {
+    font-size: 16px;
+
+  }
 `;
 
 const ContainerPhotoImageStyle = styled.div`
-  width: 340px;
-  height: 500px;
   background: #000;
+  display: flex;
+  align-items: center;
+
 `;
-const PhotoImageStyle = styled.img``;
+const PhotoImageStyle = styled.img`
+  @media ${device.mobileS} {
+    width: 100%;
+    height: 350px;
+  }
+
+  @media ${device.mobileM} {
+    width: 100%;
+    height: 360px;
+  }
+
+  @media ${device.mobileL} {
+    width: 100%;
+    height: 400px;
+  }
+
+  @media ${device.tablet} {
+    width: 300px;
+    height: 350px;
+  }
+
+  @media ${device.tablet} {
+    width: 340px;
+    height: 410px;
+  }
+`;
 
 export {
     PhotoImageStyle,

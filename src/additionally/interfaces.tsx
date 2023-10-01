@@ -4,6 +4,7 @@ export interface PropsTheme {
 
   export interface PropsElementList {
     textElement: string;
+    link: string;
   }
 
   export interface SvgIcon {

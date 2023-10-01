@@ -5,10 +5,10 @@ import {
 } from "../../styles/header/ElementList"
 import { MarkedSymbolStyle } from '../../styles/AppStyled';
 
-const ElementList: React.FC<PropsElementList> = ({ textElement }) => {
+const ElementList: React.FC<PropsElementList> = ({ textElement, link }) => {
     return (
         <ElementListStyle>
-            <LinkNavStyle>
+            <LinkNavStyle to={link}>
                 <MarkedSymbolStyle>#</MarkedSymbolStyle>
                 {textElement}
             </LinkNavStyle>

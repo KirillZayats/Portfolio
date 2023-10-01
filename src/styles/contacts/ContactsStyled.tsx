@@ -1,18 +1,54 @@
 import Icon from "../../styles/Icon";
 import { styled } from "styled-components";
+import { device, size } from "../media/MediaQueryStyled";
 
 const ContactsStyle = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* padding: 60px 0; */
-  gap: 45px;
+
+  @media ${device.mobileS} {
+    max-width: 100%;
+    gap: 30px;
+  }
+
+  @media ${device.mobileM} {
+    max-width: calc(${size.mobileM} - 30px);
+  }
+
+  @media ${device.mobileL} {
+    max-width: calc(${size.mobileL} - 50px);
+  }
+
+  @media ${device.tablet} {
+    max-width: calc(${size.tablet} - 50px);
+    gap: 40px;
+  }
+  @media ${device.tabletS} {
+    max-width: calc(${size.tabletS} - 50px);
+  }
+
+  @media ${device.laptop} {
+    max-width: calc(${size.laptop} - 50px);
+  }
+
+  @media ${device.desktop} {
+    max-width: calc(${size.desktop} - 300px);
+  }
 `;
 
 const ContainerContactsStyle = styled.div`
   display: flex;
-  flex-direction: row;
+
+  @media ${device.mobileS} {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @media ${device.tablet} {
+    flex-direction: row;
   justify-content: space-between;
+  }
 `;
 
 const TextContactsStyle = styled.p`

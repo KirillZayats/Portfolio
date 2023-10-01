@@ -1,5 +1,6 @@
 import { styled, createGlobalStyle } from "styled-components";
 import Icon from "../styles/Icon";
+import { device, size } from "../styles/media/MediaQueryStyled";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -30,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+    cursor: pointer;
   }
 `;
 
@@ -44,9 +46,31 @@ const TitleStyle = styled.h2`
   line-height: normal;
 `;
 const LineTitleStyle = styled.div`
-  width: 240px;
   height: 2px;
   background: ${({ theme }) => theme.colors.MARKER_COLOR};
+  @media ${device.mobileS} {
+    width: 100px;
+  }
+
+  @media ${device.mobileM} {
+    width: 150px;
+  }
+
+  @media ${device.mobileL} {
+    width: 180px;
+  }
+
+  @media ${device.tablet} {
+    width: 170px;
+  }
+
+  @media ${device.tabletS} {
+    width: 210px;
+  }
+
+  @media ${device.laptop} {
+    width: 240px;
+  }
 `;
 
 const TitleBlockStyle = styled.div`
@@ -157,22 +181,77 @@ const NewLineStyle = styled.br``;
 
 
 const ContainerHomePageStyle = styled.main`
-  width: 1060px;
   background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
   margin: 0 auto;
   padding: 121px 0 60px;
   display: flex;
   flex-direction: column;
-  gap: 105px;
+  @media ${device.mobileS} {
+    max-width: calc(100% - 20px);
+    gap: 55px;
+  }
+
+  @media ${device.mobileM} {
+    max-width: calc(${size.mobileM} - 30px);
+  }
+
+  @media ${device.mobileL} {
+    max-width: calc(${size.mobileL} - 50px);
+  }
+
+  @media ${device.tablet} {
+    max-width: calc(${size.tablet} - 50px);
+    gap: 70px;
+  }
+  @media ${device.tabletS} {
+    max-width: calc(${size.tabletS} - 50px);
+  }
+
+  @media ${device.laptop} {
+    max-width: calc(${size.laptop} - 50px);
+    gap: 90px;
+  }
+
+  @media ${device.desktop} {
+    max-width: calc(${size.desktop} - 300px);
+    gap: 105px;
+  }
 `;
 const ContainerPageStyle = styled.main`
-  width: 1060px;
   background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
   margin: 0 auto;
   padding: 120px 0 60px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  @media ${device.mobileS} {
+    max-width: calc(100% - 20px);
+    gap: 50px;
+  }
+
+  @media ${device.mobileM} {
+    max-width: calc(${size.mobileM} - 30px);
+  }
+
+  @media ${device.mobileL} {
+    max-width: calc(${size.mobileL} - 50px);
+  }
+
+  @media ${device.tablet} {
+    max-width: calc(${size.tablet} - 50px);
+    gap: 60px;
+
+  }
+  @media ${device.tabletS} {
+    max-width: calc(${size.tabletS} - 50px);
+  }
+
+  @media ${device.laptop} {
+    max-width: calc(${size.laptop} - 50px);
+  }
+
+  @media ${device.desktop} {
+    max-width: calc(${size.desktop} - 300px);
+  }
 `;
 
 const SubTitleStyle = styled.div`
@@ -192,7 +271,13 @@ const ContainerTitlePageStyle = styled.section`
 const ContainerBlockColumnStyle = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  @media ${device.mobileS} {
+    gap: 30px;    
+  }
+
+  @media ${device.tablet} {
+    gap: 40px;    
+  }
 `;
 
 export {

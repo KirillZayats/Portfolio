@@ -6,7 +6,6 @@ const DescriptionStyle = styled.section`
     flex-direction: row;
     justify-content: space-between;
     gap: 30px;
-    /* padding: 60px 0; */
 `;
 
 const ContainerInformationStyle = styled.div`

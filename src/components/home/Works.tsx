@@ -5,6 +5,8 @@ import {
     ContainerTitleStyle,
     ListWorksStyle,
     LinkViewAllStyle,
+    ContainerLinkDownStyle,
+    ContainerLinkUpStyle,
 } from '../../styles/home/WorksStyled'
 import Work from "../works/Work";
 
@@ -18,13 +20,18 @@ const Works = () => {
         </TitleStyle>
         <LineTitleStyle/>
         </TitleBlockStyle>
+        <ContainerLinkUpStyle>
         <LinkViewAllStyle>{'Все проекты ~~>'}</LinkViewAllStyle>
+        </ContainerLinkUpStyle>
       </ContainerTitleStyle>
       <ListWorksStyle>
         <Work/>
         <Work/>
         <Work/>
       </ListWorksStyle>
+      <ContainerLinkDownStyle>
+        <LinkViewAllStyle>{'Все проекты ~~>'}</LinkViewAllStyle>
+        </ContainerLinkDownStyle>
     </WorksStyle>
   );
 };
