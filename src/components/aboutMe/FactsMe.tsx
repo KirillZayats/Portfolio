@@ -10,7 +10,7 @@ import {
   ElementListStyle,
   ListFactsStyle,
   FactsStyle
-} from '../../styles/aboutMe/FactsMe'
+} from '../../styles/aboutMe/FactsMeStyled'
 import { LIST_FACTS } from "../../additionally/constants";
 
 const FactsMe = () => {

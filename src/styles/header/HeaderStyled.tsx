@@ -1,24 +1,64 @@
 import { styled } from "styled-components";
 import { device, size } from "../media/MediaQueryStyled";
 import { SidebarStyle } from "./SidebarStyled";
+import { LogotypeStyle } from "../AppStyled";
 
 const NavStyle = styled.nav`
   margin-left: auto;
+  transition: all .4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  @media ${device.mobileS} {
+    max-width: calc(${size.laptop});
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: -45px;
+    background: ${({ theme }) => theme.colors.MAIN_BG_COLOR};
+  }
+
+  @media ${device.laptop} {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    height: auto;
+    width: auto;
+    background: inherit;
+  }
 `;
 const ListNavStyle = styled.ul`
   display: flex;
-  justify-content: space-between;
+
+
+  @media ${device.mobileS} {
+    flex-direction: column;
+    justify-content: space-between;
   gap: 32px;
+  }
+
+  @media ${device.laptop} {
+    justify-content: space-between;
+    flex-direction: row;
+  gap: 32px;
+  }
 `;
 
 const HeaderStyle = styled.header`
   margin: 0 auto;
   width: 100%;
   position: fixed;
+  z-index: 999;
+
 `;
 
 const ContainerStyle = styled.div`
-  background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
+  background: ${({ theme }) => theme.colors.MAIN_BG_COLOR};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +101,17 @@ const ContainerStyle = styled.div`
     transform: rotate(45deg);
     width: 22px;
     top: -2px;
+  }
+
+  input[type="checkbox"]:checked ~ ${NavStyle} {
+    visibility: visible;
+    opacity: 1;
+    top: 0px;
+    height: 100vh;
+  }
+
+  ${LogotypeStyle} {
+    z-index: 999;
   }
 `;
 

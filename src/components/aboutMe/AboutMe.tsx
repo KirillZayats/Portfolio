@@ -5,6 +5,7 @@ import {
   TitleBlockStyle,
   LineTitleStyle,
   ButtonStyle,
+  LinkStyle,
 } from "../../styles/AppStyled";
 import {
   PhotoImageStyle,
@@ -28,7 +29,7 @@ const AboutMe = () => {
         <ContainerTextStyle>
           <TextStyle>
             Я front-end разработчик из Беларуси. По профессии
-            Инженер-программист. Имею опыт больше года  в разработке
+            Инженер-программист. Имею опыт больше двух лет в разработке
             проектов малой и средней сложности. Я человек не конфликтный. Умею
             работать в команде и легко начинаю диалог.
           </TextStyle>
@@ -36,9 +37,11 @@ const AboutMe = () => {
             В ближайшее время планирую подтягивать свой английский язык до
             уровня B1-B2 и изучать новые технологии в сфере Front-end.
           </TextStyle>
-          <TextStyle>Через 3-4 года вижу себя Middle разработчиком.</TextStyle>
+          <TextStyle>Через 4-5 лет вижу себя Senior разработчиком.</TextStyle>
         </ContainerTextStyle>
+        <LinkStyle to={'/aboutme'}>
         <ButtonStyle>{"Узнать больше"}</ButtonStyle>
+        </LinkStyle>
       </ContainerInfoMeStyle>
       <ContainerPhotoImageStyle>
         <PhotoImageStyle />

@@ -1,6 +1,7 @@
 import { styled, createGlobalStyle } from "styled-components";
 import Icon from "../styles/Icon";
 import { device, size } from "../styles/media/MediaQueryStyled";
+import { Link } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -23,6 +24,14 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.TEXT_COLOR};
     font-family: 'Fira Code', sans-serif;
 
+  }
+
+  button {
+    font-family: 'Fira Code', sans-serif;
+    font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
   }
 
   li {
@@ -80,6 +89,8 @@ const TitleBlockStyle = styled.div`
   align-items: center;
 `;
 
+const LinkStyle = styled(Link)``;
+
 const ButtonStyle = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.MARKER_COLOR};
   width: 148px;
@@ -91,6 +102,8 @@ const ButtonStyle = styled.button`
 const LogotypeStyle = styled.div`
   display: flex;
   gap: 8px;
+  cursor: pointer;
+  
 `;
 const NameLogotypeStyle = styled.span`
   font-size: 16px;
@@ -181,7 +194,6 @@ const NewLineStyle = styled.br``;
 
 
 const ContainerHomePageStyle = styled.main`
-  background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
   margin: 0 auto;
   padding: 121px 0 60px;
   display: flex;
@@ -218,7 +230,6 @@ const ContainerHomePageStyle = styled.main`
   }
 `;
 const ContainerPageStyle = styled.main`
-  background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
   margin: 0 auto;
   padding: 120px 0 60px;
   display: flex;
@@ -300,5 +311,6 @@ export {
   IconGithub,
   NewLineStyle,
   ContainerHomePageStyle,
-  ContainerPageStyle
+  ContainerPageStyle,
+  LinkStyle
 };

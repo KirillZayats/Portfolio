@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 import { device, size } from "../media/MediaQueryStyled";
 
 const ContainerStyle = styled.div`
-  background: ${({ theme }) => theme.colors.SECOND_BG_COLOR};
   display: flex;
   flex-direction: column;
   justify-content: space-between;

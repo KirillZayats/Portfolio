@@ -9,7 +9,7 @@ import { MarkedSymbolStyle, ButtonStyle } from "../../styles/AppStyled";
 
 const Description: React.FC = () => {
   return (
-    <DescriptionStyle>
+    <DescriptionStyle >
       <ContainerInformationStyle>
         <TitleStyle>
           Привет! Меня зовут Кирилл и я <MarkedSymbolStyle>Front-end</MarkedSymbolStyle> разработчик

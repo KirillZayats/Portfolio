@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Description from '../components/home/Description';
 import Works from '../components/home/Works';
 import Skills from '../components/aboutMe/Skills';

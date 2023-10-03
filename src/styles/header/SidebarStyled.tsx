@@ -33,7 +33,7 @@ const SidebarElementStyle = styled.span`
   left: 0px;
   top: 0px;
   height: 2px;
-  background: ${({ theme }) => theme.colors.TEXT_COLOR};
+  background: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
   opacity: 1;
   &.top {
     width: 22px;

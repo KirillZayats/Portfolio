@@ -1,0 +1,144 @@
+{
+    "En": {
+        "nav-links": [["home", "/"], ["projects", "/works"], ["about me", "/aboutme"]],
+        "description": {
+            "title-site": "Hi! My name is Kiryl and I'm <MarkedSymbolStyle>Front-end</MarkedSymbolStyle> developer",
+            "subtitle-site":"I turn your ideas into reality!!!",
+            "button-write-me": "Write me"
+        },
+        "projects": {
+            "title": "Projects",
+            "subtitle": "My projects",
+            "title-big-projects": "big",
+            "big-projects": [
+                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                },
+                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                },                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                },                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                }
+            ],
+            "title-small-projects": "small",
+            "small-projects": [
+                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                },
+                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                }
+            ],
+            "button-open": "open",
+            "button-details": "details"
+        },
+        "aboutme": {
+            "title": "Обо мне",
+            "subtitle": "Кто я?",
+            "descriptionMe": ["Я front-end разработчик из Беларуси. По профессии Инженер-программист. Имею опыт больше двух лет в разработке проектов малой и средней сложности. Я человек не конфликтный. Умею работать в команде и легко начинаю диалог.",
+                            "В ближайшее время планирую подтягивать свой английский язык до уровня B1-B2 и изучать новые технологии в сфере Front-end.",
+                        "Через 4-5 лет вижу себя Senior разработчиком."],
+            "button-more": "Узнать больше",
+            "title-skills": "Умения",
+            "titles-skills": ["Языки", "Библиотеки", "Базы данных", "Остальное"],
+            "title-facts": "факты обо мне",
+            "facts": ["Имею высшее образование", "Занимался спортом более 7 лет", 
+            "Моё хобби - 3D печать и создание небольших видеороликов", "Люблю смотреть сериалы", "", "", ""],
+            "title-contacts": "контакты",
+            "message-contacts": "По любым интересующим вас вопросам можно написать мне. Буду очень рад каждому вашему вопросу :)",
+            "title-links": "Написать можно здесь"
+
+        },
+        "footer": {
+            "developer-text": "The web application was developed by Zayats Kiryl.",
+            "design-text": "Web design developed by Elias",
+            "media": "Media",
+            "text-copyright": "© All rights reserved 2023. Made by Zayats Kiryl"
+        }
+    },
+    "Ru": {
+        "nav-links": [["главная", "/"], ["проекты", "/works"], ["обо мне", "/aboutme"]],
+        "description": {
+            "title": "Привет! Меня зовут Кирилл и я <MarkedSymbolStyle>Front-end</MarkedSymbolStyle> разработчик",
+            "subtitle": "Воплощаю ваши идеи в реальность!!!",
+            "button-write-me": "Написать"
+        },
+        "projects": {
+            "title": "Проекты",
+            "subtitle": "Мои проекты",
+            "title-big-projects": "большие",
+            "big-projects": [
+                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                },
+                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                },                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                },                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                }
+            ],
+            "title-small-projects": "маленькие",
+            "small-projects": [
+                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                },
+                {
+                    "name": "",
+                    "description": "",
+                    "technologies": ["", "", "", "", ""]
+                }
+            ],
+            "button-open": "открыть",
+            "button-details": "подробнее"
+        },
+        "aboutme": {
+            "title": "Обо мне",
+            "subtitle": "Кто я?",
+            "descriptionMe": ["Я front-end разработчик из Беларуси. По профессии Инженер-программист. Имею опыт больше двух лет в разработке проектов малой и средней сложности. Я человек не конфликтный. Умею работать в команде и легко начинаю диалог.",
+                            "В ближайшее время планирую подтягивать свой английский язык до уровня B1-B2 и изучать новые технологии в сфере Front-end.",
+                        "Через 4-5 лет вижу себя Senior разработчиком."],
+            "button-more": "Узнать больше",
+            "title-skills": "Умения",
+            "titles-skills": ["Языки", "Библиотеки", "Базы данных", "Остальное"],
+            "title-facts": "факты обо мне",
+            "facts": ["Имею высшее образование", "Занимался спортом более 7 лет", 
+            "Моё хобби - 3D печать и создание небольших видеороликов", "Люблю смотреть сериалы", "", "", ""],
+            "title-contacts": "контакты",
+            "message-contacts": "По любым интересующим вас вопросам можно написать мне. Буду очень рад каждому вашему вопросу :)",
+            "title-links": "Написать можно здесь"
+
+        },
+        "footer": {
+            "developer-text": "Разработал web-приложение Заяц Кирилл.",
+            "design-text": "Разработал web-дизайн Elias",
+            "media": "Медиа",
+            "text-copyright": "© Все права защищены 2023. Сделал Заяц Кирилл"
+        }
+    }
+}

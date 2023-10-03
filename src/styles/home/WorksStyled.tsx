@@ -4,6 +4,7 @@ import { device, size } from "../media/MediaQueryStyled";
 const WorksStyle = styled.section`
   display: flex;
   flex-direction: column;
+  z-index: 0;
   @media ${device.mobileS} {
     gap: 30px;
   }
@@ -36,6 +37,14 @@ const ListWorksStyle = styled.ul`
 
   @media ${device.tablet} {
     justify-content: space-between;
+  }
+
+  @media ${device.laptop} {
+    justify-content: left;
+    gap: 33px;
+  }
+  @media ${device.desktop} {
+    gap: 57px;
   }
 `;
 const ElementListStyle = styled.li`

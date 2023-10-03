@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 import { device, size } from "../media/MediaQueryStyled";
 
 const DropdownStyle = styled.div`
-  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -10,9 +9,31 @@ const DropdownStyle = styled.div`
   position: relative;
     cursor: pointer;
 
+  @media ${device.mobileS} {
+    font-size: 32px;
+    &:hover .hidden{
+    height: 40px;
+  }
+
+  /* &:hover .left{
+    top: 10px;
+  }
+
+  &:hover .right{
+    top: 8px;
+    left: 4px;
+} */
+  }
+
+  @media ${device.laptop} {
+    font-size: 16px;
+    &:hover .hidden{
+    height: 20px;
+  }  
+}
+
   &:hover .hidden{
     display: block;
-    height: 20px;
     border: 1px solid ${({ theme }) => theme.colors.TEXT_COLOR};
     visibility: visible;
     opacity: 1;
@@ -20,13 +41,10 @@ const DropdownStyle = styled.div`
 
   &:hover .left{
     transform: rotate(-45deg);
-    top: 10px;
   }
 
   &:hover .right{
     transform: rotate(45deg);
-    top: 8px;
-    left: 4px;
 }
 `;
 const ContainerActiveOptionStyle = styled.div`
@@ -37,23 +55,47 @@ const ContainerActiveOptionStyle = styled.div`
 `;
 const OptionTextStyle = styled.span``;
 const ArrowStyle = styled.div`
-  height: 11px;
-  width: 12px;
+  @media ${device.mobileS} {
+    height: 11px;
+  width: 20px;}
+
+  @media ${device.laptop} {
+    height: 11px;
+  width: 12px;  }
 `;
 const LineArrowStyle = styled.div`
   position: relative;
   transition: all .4s ease;
-  width: 7px;
-  height: 2px;
   background: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
   &.left {
     transform: rotate(45deg);
-    top: 10px;
   }
   &.right {
     transform: rotate(-45deg);
+  }
+
+  @media ${device.mobileS} {
+    width: 13px;
+  height: 3px;  
+  &.left {
+    top: 19px;
+  }
+  &.right {
+    top: 16px;
+    left: 8px;
+  }
+}
+
+  @media ${device.laptop} {
+    width: 7px;
+  height: 2px;  
+  &.left {
+    top: 10px;
+  }
+  &.right {
     top: 8px;
     left: 4px;
+  }
   }
 `;
 
@@ -62,11 +104,17 @@ const ContainerHidenOptionStyle = styled.div`
   visibility: hidden;
   height: 0;
   opacity: 0;
-  width: 34px;
   padding: 2px 1px;
   text-align: center;
   transition: all .4s ease;
 
+  @media ${device.mobileS} {
+    width: 63px;
+}
+
+  @media ${device.laptop} {
+    width: 34px;
+  }
 `;
 const OptionHidenStyle = styled.span``;
 

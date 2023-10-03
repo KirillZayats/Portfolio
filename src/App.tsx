@@ -7,6 +7,7 @@ import { GlobalStyle } from "./styles/AppStyled";
 import Works from "./pages/Works";
 import AboutMe from "./pages/AboutMe";
 import { Route, Routes } from "react-router-dom";
+import DownUp from "./components/DownUp";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <Route path={`/aboutme`} element={<AboutMe />} />
       </Routes>
       <Footer />
+      <DownUp/>
     </Theme>
   );
 };

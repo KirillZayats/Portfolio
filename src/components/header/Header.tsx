@@ -14,12 +14,41 @@ import Dropdown from './Dropdown';
 
 const Header: React.FC = () => {
   const [widthWindow, setWidthWindow] = useState(window.innerWidth);
+  const [buttonDownUp, setButtonDownUp] = useState<HTMLElement | null>(null);
+
   useEffect(() => {
-    const handleWindowResize = () => {
+    window.addEventListener("resize", () => {
       setWidthWindow(window.innerWidth);
-    };
-    window.addEventListener("resize", handleWindowResize);
+    });
   }, []);
+
+  useEffect (() => {
+    setButtonDownUp(document.getElementById("down-up"));
+    document.addEventListener("scroll", scrollPage);
+  })
+
+  const scrollPage = () => {    
+    if (window.scrollY >= 500) {
+      viewButtonDownUp();
+    }
+    if (window.scrollY < 500) {
+      hideButtonDownUp();
+    }
+  };
+
+  const viewButtonDownUp = () => {
+    if(buttonDownUp != null) {
+      buttonDownUp.style.opacity = "1";
+      buttonDownUp.style.bottom = "20px";
+    }
+  };
+
+  const hideButtonDownUp = () => {
+    if(buttonDownUp != null) {
+      buttonDownUp.style.opacity = "0";
+      buttonDownUp.style.bottom = "-50px";
+    }
+  };
   
 
   return (
@@ -46,13 +75,15 @@ const Header: React.FC = () => {
                 id="checked"
               />
         <Sidebar/>
-        {/* <NavStyle>
+        <NavStyle>
           <ListNavStyle>
             {
               LINKS_NAV.map((element, index) => (<ElementList key={index} textElement={element[0]} link={element[1]} />))
             }
           </ListNavStyle>
-        </NavStyle> */}
+          <Dropdown/>
+
+        </NavStyle>
       </ContainerStyle>
     </HeaderStyle>
     )

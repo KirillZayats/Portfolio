@@ -10,6 +10,7 @@ import {
   SkillsStyle,
   ContainerContentStyle,
 } from "../../styles/aboutMe/SkillsStyled";
+import MainSkills from "../aboutMe/MainSkills";
 
 const Skills = () => {
   const massive = [1, 2, 3, 4, 5, 6];
@@ -21,11 +22,18 @@ const Skills = () => {
         </TitleStyle>
         <LineTitleStyle />
       </TitleBlockStyle>
-      <ContainerContentStyle>
-        {massive.map((item, index) => (
-          <CardSkill key={index}/>
-        ))}
-      </ContainerContentStyle>
+      <MainSkills />
+      {
+        window.location.href.includes(`aboutme`) &&
+        (
+          <ContainerContentStyle>
+            {massive.map((item, index) => (
+              <CardSkill key={index} />
+            ))}
+          </ContainerContentStyle>
+        )
+      }
+
     </SkillsStyle>
   );
 };
