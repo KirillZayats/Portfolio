@@ -18,10 +18,18 @@ font-weight: 500;
     font-size: 16px;
   }
 
-&:link {
+  &.no-active {
     color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
-}
-&:visited {
+  }
+
+  &.active {
+    color: ${({ theme }) => theme.colors.TEXT_COLOR};
+  }
+  &:hover {
+    color: ${({ theme }) => theme.colors.MARKER_COLOR};
+  }
+
+&:link {
     color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
 }
 `;

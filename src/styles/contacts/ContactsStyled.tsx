@@ -79,16 +79,29 @@ max-width: 400px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px;
+  column-gap: 16px;
+  row-gap: 8px;
+
   border-top: 1px solid ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
   padding: 8px;
 
 `;
 const ElementListLinksStyle = styled.li`
+
+`;
+
+const LinkSocialStyle = styled.a`
   display: flex;
   flex-direction: row;
   gap: 5px;
   align-items: center;
+
+  &:hover path{
+    fill: ${({ theme }) => theme.colors.TEXT_COLOR};
+  }
+  &:hover span{
+    color: ${({ theme }) => theme.colors.TEXT_COLOR};
+  }
 `;
 
 export {
@@ -99,5 +112,6 @@ export {
     ContainerContactsStyle,
     ContainerSocialLinksStyle,
     ElementListLinksStyle,
-    TitleContainerSocialStyle
+    TitleContainerSocialStyle,
+    LinkSocialStyle
 }

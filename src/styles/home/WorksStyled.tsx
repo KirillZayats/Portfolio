@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { device, size } from "../media/MediaQueryStyled";
+import { Link } from "react-router-dom";
 
 const WorksStyle = styled.section`
   display: flex;
@@ -19,12 +20,19 @@ const ContainerTitleStyle = styled.div`
   justify-content: space-between;
 `;
 
-const LinkViewAllStyle = styled.a`
+const LinkViewAllStyle = styled(Link)`
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   padding: 8px;
+&:link, &:visited {
+    color: ${({ theme }) => theme.colors.TEXT_COLOR};
+}
+
+&:hover {
+    color: ${({ theme }) => theme.colors.MARKER_COLOR};
+  } 
 `;
 
 const ListWorksStyle = styled.ul`

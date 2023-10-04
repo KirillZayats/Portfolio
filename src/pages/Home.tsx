@@ -5,8 +5,10 @@ import Skills from '../components/aboutMe/Skills';
 import AboutMe from '../components/aboutMe/AboutMe';
 import Contacts from '../components/contacts/Contacts';
 import {ContainerHomePageStyle} from '../styles/AppStyled';
+import { useLocation } from 'react-router-dom';
 
 const Home:React.FC = () => {
+
   return (
     <ContainerHomePageStyle>
      <Description/>

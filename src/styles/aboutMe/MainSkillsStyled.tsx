@@ -4,7 +4,7 @@ const MainSkillsStyle = styled.ul`
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
 `;
 
 const SkillStyle = styled.li`

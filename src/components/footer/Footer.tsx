@@ -16,7 +16,9 @@ import {
   TextFooterStyle,
   FooterStyle,
   ContainerStyle,
+  LinkIconStyle
 } from "../../styles/footer/FooterStyled";
+import { LINK_GITHUB, LINK_LINKEDIN, LINK_TELEGRAM } from "../../additionally/constants";
 
 const Footer: React.FC = () => {
   return (
@@ -37,14 +39,20 @@ const Footer: React.FC = () => {
           <ContainerMediaStyle>
             <TitleContainerMediaStyle>Медиа</TitleContainerMediaStyle>
             <ContainerIconsLinkStyle>
-              <IconLinkedin />
-              <IconGithub />
-              <IconTelegram />
+              <LinkIconStyle href={LINK_LINKEDIN} target="_blank">
+                <IconLinkedin />
+              </LinkIconStyle>
+              <LinkIconStyle href={LINK_GITHUB} target="_blank">
+                <IconGithub />
+              </LinkIconStyle>
+              <LinkIconStyle href={LINK_TELEGRAM} target="_blank">
+                <IconTelegram />
+              </LinkIconStyle>
             </ContainerIconsLinkStyle>
           </ContainerMediaStyle>
         </ContainerMainFooterStyle>
         <TextCopyrightStyle>
-        © Все права защищены 2023. Сделал Заяц Кирилл
+          © Все права защищены 2023. Сделал Заяц Кирилл
         </TextCopyrightStyle>
       </ContainerStyle>
     </FooterStyle>

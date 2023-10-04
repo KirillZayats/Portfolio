@@ -10,3 +10,8 @@ export interface PropsTheme {
   export interface SvgIcon {
     className?: SVGAnimatedString;
   }
+
+  export interface Skill {
+    title: string;
+    elements: [];
+  }

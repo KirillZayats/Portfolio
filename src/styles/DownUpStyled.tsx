@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 const Svg = styled(IconArrow)`
   width: 40px;
   height: 40px;
-  fill: ${({ theme }) => theme.colors.secondColor};
+  fill: ${({ theme }) => theme.colors.TEXT_COLOR};
 `;
 
 const IconArrowUp: React.FC<React.SVGProps<SVGSVGElement>> = ({ className }) => (
@@ -25,11 +25,14 @@ const DownUpStyle = styled.div`
   background: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
   bottom: -50px;
   opacity: 0;
-  transition: all 0.3s ease-in;
+  transition: all 0.4s ease-in;
   right: 20px;
 
   &:hover svg {
-    fill: ${({ theme }) => theme.colors.TEXT_COLOR};
+    fill: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
+  }
+  &:hover {
+    background: ${({ theme }) => theme.colors.TEXT_COLOR};
   }
 `;
 

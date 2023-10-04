@@ -14,15 +14,6 @@ const DropdownStyle = styled.div`
     &:hover .hidden{
     height: 40px;
   }
-
-  /* &:hover .left{
-    top: 10px;
-  }
-
-  &:hover .right{
-    top: 8px;
-    left: 4px;
-} */
   }
 
   @media ${device.laptop} {
@@ -39,6 +30,18 @@ const DropdownStyle = styled.div`
     opacity: 1;
   }
 
+  .hidden:hover {
+    border: 1px solid ${({ theme }) => theme.colors.MARKER_COLOR};
+  }
+
+  .active-language:hover span, .hidden:hover span {
+    color: ${({ theme }) => theme.colors.MARKER_COLOR};
+  }
+
+  .active-language:hover .left, .active-language:hover .right {
+    background: ${({ theme }) => theme.colors.MARKER_COLOR};
+  }
+
   &:hover .left{
     transform: rotate(-45deg);
   }
@@ -46,6 +49,8 @@ const DropdownStyle = styled.div`
   &:hover .right{
     transform: rotate(45deg);
 }
+
+
 `;
 const ContainerActiveOptionStyle = styled.div`
   display: flex;

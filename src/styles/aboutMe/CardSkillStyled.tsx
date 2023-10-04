@@ -36,7 +36,8 @@ const ListElementsStyle = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px;
+  row-gap: 8px;
+  column-gap: 12px;
   border-top: 1px solid ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
   padding: 8px;
 `;

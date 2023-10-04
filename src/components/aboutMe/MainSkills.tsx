@@ -18,7 +18,9 @@ const MainSkills = () => {
         let valueLevel = document.querySelectorAll<HTMLElement>('.value');
         for (let index = 0; index < MAIN_SKILLS.length; index++) {
             gsap.to(`#level-${index}`, {
-                scrollTrigger: `#level-${index}`,
+                scrollTrigger: {
+                    trigger: `#level-${index}`
+                },
                 width: `${MAIN_SKILLS[index][1]}%`,
               });
             valueLevel[index].innerText = `${MAIN_SKILLS[index][1]}%`;

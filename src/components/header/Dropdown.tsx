@@ -11,7 +11,7 @@ import {
 const Dropdown = () => {
   return (
     <DropdownStyle>
-      <ContainerActiveOptionStyle className="active">
+      <ContainerActiveOptionStyle className="active-language">
         <OptionTextStyle>RU</OptionTextStyle>
         <ArrowStyle>
           <LineArrowStyle className="left" />

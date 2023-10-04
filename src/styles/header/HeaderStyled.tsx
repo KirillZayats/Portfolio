@@ -5,7 +5,7 @@ import { LogotypeStyle } from "../AppStyled";
 
 const NavStyle = styled.nav`
   margin-left: auto;
-  transition: all .4s ease;
+  transition: all .5s ease;
   display: flex;
   flex-direction: column;
   gap: 32px;

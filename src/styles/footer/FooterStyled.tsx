@@ -85,7 +85,13 @@ const ContainerIconsLinkStyle = styled.div`
   display: flex;
   flex-direction: row;
   gap: 8px;
+
+  svg:hover path{
+    fill: ${({ theme }) => theme.colors.TEXT_COLOR};
+  }
 `;
+
+const LinkIconStyle = styled.a``;
 
 const TextCopyrightStyle = styled.p`
   color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
@@ -102,4 +108,5 @@ export {
   TextFooterStyle,
   FooterStyle,
   ContainerStyle,
+  LinkIconStyle
 };

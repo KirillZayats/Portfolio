@@ -5,14 +5,14 @@ import {
     NameContainerStyle,
     CardSkillStyle,
   } from '../../styles/aboutMe/CardSkillStyled';
-  
-const CardSkill = () => {
-    const type = ['erge', 'erge','erge','erge','erge','erge','erge','erge',]
+  import { Skill } from '../../additionally/interfaces';
+
+const CardSkill = ({element}: any) => {
   return (
     <CardSkillStyle>
-      <NameContainerStyle>Библиотеки</NameContainerStyle>
+      <NameContainerStyle>{element.title}</NameContainerStyle>
       <ListElementsStyle>
-        {type.map((element, index) => (<ElementListStyle key={index}>{element}</ElementListStyle>))}
+        {element.elements.map((item: any, index: any) => (<ElementListStyle key={index}>{item}</ElementListStyle>))}
       </ListElementsStyle>
     </CardSkillStyle>
   );

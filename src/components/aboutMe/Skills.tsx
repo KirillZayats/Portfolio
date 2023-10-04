@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   MarkedSymbolStyle,
   TitleStyle,
@@ -11,9 +11,33 @@ import {
   ContainerContentStyle,
 } from "../../styles/aboutMe/SkillsStyled";
 import MainSkills from "../aboutMe/MainSkills";
+import { useLocation } from "react-router-dom";
 
 const Skills = () => {
-  const massive = [1, 2, 3, 4, 5, 6];
+  const { pathname } = useLocation();
+
+  const massive = [
+    {
+      "title": "Языки",
+      "elements": ["JavaScript", "TypeScript", "C#", "Java", "Python"]
+    },
+    {
+      "title": "Библиотеки",
+      "elements": ["React", "React Router", "Redux"]
+    },
+    {
+      "title": "Остальное",
+      "elements": ["HTML", "CSS", "SCSS", "Styled Components", "Webpack", "React Native", "PyQt5"]
+    },
+    {
+      "title": "БД",
+      "elements": ["MSSQL", "SQlite", "PL/SQL", "MySQL", "PostgreSQL"]
+    },
+    {
+      "title": "Инструменты",
+      "elements": ["VSCode", "Visual Studio", "Git & GitHub", "IntelliJ IDEA", "Android Studio"]
+    }
+  ];
   return (
     <SkillsStyle>
       <TitleBlockStyle>
@@ -22,18 +46,17 @@ const Skills = () => {
         </TitleStyle>
         <LineTitleStyle />
       </TitleBlockStyle>
-      <MainSkills />
       {
-        window.location.href.includes(`aboutme`) &&
+        pathname.includes(`aboutme`) &&
         (
-          <ContainerContentStyle>
-            {massive.map((item, index) => (
-              <CardSkill key={index} />
-            ))}
-          </ContainerContentStyle>
+          <MainSkills />
         )
       }
-
+      <ContainerContentStyle>
+        {massive.map((item, index) => (
+          <CardSkill key={index} element={item}/>
+        ))}
+      </ContainerContentStyle>
     </SkillsStyle>
   );
 };

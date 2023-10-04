@@ -3,14 +3,17 @@ import {
   NameLogotypeStyle,
   Iconlogotype,
   LogotypeStyle,
+  LinkStyle,
 } from "../styles/AppStyled";
 
 const Logotype = () => {
   return (
-    <LogotypeStyle>
-      <Iconlogotype />
-      <NameLogotypeStyle>zayakiri</NameLogotypeStyle>
-    </LogotypeStyle>
+    <LinkStyle to={"/"}>
+      <LogotypeStyle>
+        <Iconlogotype />
+        <NameLogotypeStyle>zayakiri</NameLogotypeStyle>
+      </LogotypeStyle>
+    </LinkStyle>
   );
 };
 

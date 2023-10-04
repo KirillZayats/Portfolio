@@ -40,9 +40,23 @@ line-height: normal;
 
   a {
     text-decoration: none;
+  }
+
+  a:hover {
+    color: ${({ theme }) => theme.colors.MARKER_COLOR};
+  }
+
+  a, button {
     cursor: pointer;
   }
+
+  a, button, span, path {
+    transition: all .4s ease;
+  }
+
 `;
+
+
 
 const MarkedSymbolStyle = styled.span`
   color: ${({ theme }) => theme.colors.MARKER_COLOR};
@@ -89,7 +103,11 @@ const TitleBlockStyle = styled.div`
   align-items: center;
 `;
 
-const LinkStyle = styled(Link)``;
+const LinkStyle = styled(Link)`
+  &:link span, &:visited span {
+    color: ${({ theme }) => theme.colors.TEXT_COLOR};
+  }
+`;
 
 const ButtonStyle = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.MARKER_COLOR};
@@ -97,13 +115,26 @@ const ButtonStyle = styled.button`
   height: 37px;
   background: inherit;
   color: ${({ theme }) => theme.colors.TEXT_COLOR};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.TEXT_COLOR};
+    border: 1px solid ${({ theme }) => theme.colors.TEXT_COLOR};
+    background: ${({ theme }) => theme.colors.MARKER_COLOR};
+  }
 `;
 
 const LogotypeStyle = styled.div`
   display: flex;
   gap: 8px;
   cursor: pointer;
-  
+
+  &:hover span {
+    color: ${({ theme }) => theme.colors.MARKER_COLOR};
+  }
+
+  &:hover path {
+    fill: ${({ theme }) => theme.colors.MARKER_COLOR};
+  }
 `;
 const NameLogotypeStyle = styled.span`
   font-size: 16px;
@@ -187,6 +218,16 @@ const IconGithub: React.FC<React.SVGProps<SVGSVGElement>> = ({ className }) => (
       d="M15.5 6C9.69875 6 5 10.5882 5 16.2529C5 20.7899 8.00562 24.6219 12.1794 25.9804C12.7044 26.0701 12.9012 25.7625 12.9012 25.4934C12.9012 25.2499 12.8881 24.4425 12.8881 23.5838C10.25 24.058 9.5675 22.9558 9.3575 22.3791C9.23938 22.0843 8.7275 21.1743 8.28125 20.9308C7.91375 20.7386 7.38875 20.2644 8.26813 20.2516C9.095 20.2388 9.68563 20.9949 9.8825 21.3025C10.8275 22.8533 12.3369 22.4175 12.9406 22.1484C13.0325 21.4819 13.3081 21.0334 13.61 20.777C11.2737 20.5207 8.8325 19.6364 8.8325 15.7147C8.8325 14.5997 9.23938 13.6769 9.90875 12.9592C9.80375 12.7029 9.43625 11.6519 10.0138 10.2422C10.0138 10.2422 10.8931 9.97301 12.9012 11.2931C13.7413 11.0624 14.6338 10.947 15.5263 10.947C16.4188 10.947 17.3113 11.0624 18.1513 11.2931C20.1594 9.9602 21.0387 10.2422 21.0387 10.2422C21.6163 11.6519 21.2488 12.7029 21.1438 12.9592C21.8131 13.6769 22.22 14.5868 22.22 15.7147C22.22 19.6492 19.7656 20.5207 17.4294 20.777C17.81 21.0975 18.1381 21.7126 18.1381 22.6738C18.1381 24.0452 18.125 25.1474 18.125 25.4934C18.125 25.7625 18.3219 26.0829 18.8469 25.9804C20.9314 25.2935 22.7428 23.9854 24.026 22.2403C25.3092 20.4953 25.9996 18.4012 26 16.2529C26 10.5882 21.3013 6 15.5 6Z"
       fill="#ABB2BF"
     />
+  </SvgSocial>
+);
+
+const IconPhone: React.FC<React.SVGProps<SVGSVGElement>> = ({ className }) => (
+  <SvgSocial viewBox="0 0 24 24" className={className}>
+    <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
+    <g id="SVGRepo_iconCarrier"> 
+    <path d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z" fill="#ABB2BF" /> </g>
+
   </SvgSocial>
 );
 
@@ -312,5 +353,6 @@ export {
   NewLineStyle,
   ContainerHomePageStyle,
   ContainerPageStyle,
-  LinkStyle
+  LinkStyle,
+  IconPhone
 };

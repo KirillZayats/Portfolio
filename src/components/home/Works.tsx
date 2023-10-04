@@ -11,6 +11,7 @@ import {
 import Work from "../works/Work";
 
 const Works = () => {
+
   return (
     <WorksStyle>
       <ContainerTitleStyle>
@@ -21,7 +22,7 @@ const Works = () => {
         <LineTitleStyle/>
         </TitleBlockStyle>
         <ContainerLinkUpStyle>
-        <LinkViewAllStyle>{'Все проекты ~~>'}</LinkViewAllStyle>
+        <LinkViewAllStyle to={"/works"}>{'Все проекты ~~>'}</LinkViewAllStyle>
         </ContainerLinkUpStyle>
       </ContainerTitleStyle>
       <ListWorksStyle>
@@ -30,7 +31,7 @@ const Works = () => {
         <Work/>
       </ListWorksStyle>
       <ContainerLinkDownStyle>
-        <LinkViewAllStyle>{'Все проекты ~~>'}</LinkViewAllStyle>
+        <LinkViewAllStyle to={"/works"}>{'Все проекты ~~>'}</LinkViewAllStyle>
         </ContainerLinkDownStyle>
     </WorksStyle>
   );

@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { device, size } from "../media/MediaQueryStyled";
+import { Link } from "react-router-dom";
 
 const ElementListStyle = styled.li`
   border: 1px solid ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
@@ -63,6 +64,30 @@ const ContainerInfoStyle = styled.div`
   padding: 16px;
 `;
 const ElementTechnologyStyle = styled.li``;
+const ContainerButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+`;
+
+const LinkButtonStyle = styled(Link)`
+  width: 100%;
+`;
+
+const ButtonStyle = styled.button`
+  border: 1px solid ${({ theme }) => theme.colors.MARKER_COLOR};
+  max-width: 170px;
+  width: 100%;
+  height: 37px;
+  background: inherit;
+  color: ${({ theme }) => theme.colors.TEXT_COLOR};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.TEXT_COLOR};
+    border: 1px solid ${({ theme }) => theme.colors.TEXT_COLOR};
+    background: ${({ theme }) => theme.colors.MARKER_COLOR};
+  }
+`;
 
 const CardStyle = styled.article``;
 export {
@@ -73,5 +98,8 @@ export {
     ListTechnologyStyle,
     ImageWorkStyle,
     TitleWorkStyle,
-    CardStyle
+    CardStyle,
+    ContainerButtons,
+    ButtonStyle,
+    LinkButtonStyle
 }

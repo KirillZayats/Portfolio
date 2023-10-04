@@ -9,8 +9,10 @@ import {
   ImageWorkStyle,
   TitleWorkStyle,
   CardStyle,
+  ContainerButtons,
+  ButtonStyle,
+  LinkButtonStyle
 } from "../../styles/works/WorkStyled";
-import { ButtonStyle } from "../../styles/AppStyled";
 
 const Work = () => {
   const technology = ["HTML", "CSS", "REDUX", "REACT"];
@@ -28,7 +30,13 @@ const Work = () => {
         <ContainerInfoStyle>
           <TitleWorkStyle>ChertNodes</TitleWorkStyle>
           <TextStyle>Minecraft servers hosting</TextStyle>
+          <ContainerButtons>
           <ButtonStyle>Открыть</ButtonStyle>
+          <LinkButtonStyle to={"/"}>
+          <ButtonStyle>Подробнее</ButtonStyle>
+          </LinkButtonStyle>
+
+          </ContainerButtons>
         </ContainerInfoStyle>
       </CardStyle>
     </ElementListStyle>
