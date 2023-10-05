@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.MAIN_BG_COLOR};
     color: ${({ theme }) => theme.colors.TEXT_COLOR};
     font-family: 'Fira Code', sans-serif;
-
+    overflow-x:hidden;
   }
 
   button {

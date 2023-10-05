@@ -7,6 +7,12 @@ export interface PropsTheme {
     link: string;
   }
 
+  export interface PropsModal {
+    active: boolean;
+    setActive: Function;
+    message: string;
+  }
+
   export interface SvgIcon {
     className?: SVGAnimatedString;
   }

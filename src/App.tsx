@@ -8,6 +8,7 @@ import Works from "./pages/Works";
 import AboutMe from "./pages/AboutMe";
 import { Route, Routes } from "react-router-dom";
 import DownUp from "./components/DownUp";
+import TransitionPage from "./components/TransitionPage";
 
 const App: React.FC = () => {
   return (
@@ -15,12 +16,24 @@ const App: React.FC = () => {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path={`/`} element={<Home />} />
-        <Route path={`/works`} element={<Works />} />
-        <Route path={`/aboutme`} element={<AboutMe />} />
+        <Route path={`/`} element={
+          <TransitionPage>
+            <Home />
+          </TransitionPage>
+        } />
+        <Route path={`/works`} element={
+          <TransitionPage>
+            <Works />
+          </TransitionPage>
+        } />
+        <Route path={`/aboutme`} element={
+          <TransitionPage>
+            <AboutMe />
+          </TransitionPage>
+        } />
       </Routes>
       <Footer />
-      <DownUp/>
+      <DownUp />
     </Theme>
   );
 };

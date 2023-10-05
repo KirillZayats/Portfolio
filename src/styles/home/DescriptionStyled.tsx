@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 const DescriptionStyle = styled.section`
@@ -33,9 +34,12 @@ color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
 margin: 32px 0 24px;
 `;
 
+const LinkButtonStyle = styled(Link)``;
+
 export {
     TextDescriptionStyle,
     TitleStyle,
     ContainerInformationStyle,
-    DescriptionStyle
+    DescriptionStyle,
+    LinkButtonStyle
 }

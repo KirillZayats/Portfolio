@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ImageProject from "../../resources/ImageProject.png";
 import {
   ContainerInfoStyle,
@@ -10,12 +10,20 @@ import {
   TitleWorkStyle,
   CardStyle,
   ContainerButtons,
-  ButtonStyle,
-  LinkButtonStyle
+  ButtonStyle
 } from "../../styles/works/WorkStyled";
+import Modal from "../Modal/Modal";
 
 const Work = () => {
+  const [modalActive, setModalActive] = useState(false);
+  const [message, setMessage] = useState('');
   const technology = ["HTML", "CSS", "REDUX", "REACT"];
+
+  const openDetails = () => {
+    setModalActive(true);
+    setMessage("Lol");
+  }
+
   return (
     <ElementListStyle>
       <CardStyle>
@@ -32,13 +40,12 @@ const Work = () => {
           <TextStyle>Minecraft servers hosting</TextStyle>
           <ContainerButtons>
           <ButtonStyle>Открыть</ButtonStyle>
-          <LinkButtonStyle to={"/"}>
-          <ButtonStyle>Подробнее</ButtonStyle>
-          </LinkButtonStyle>
+          <ButtonStyle onClick={openDetails}>Подробнее</ButtonStyle>
 
           </ContainerButtons>
         </ContainerInfoStyle>
       </CardStyle>
+      <Modal active={modalActive} setActive={setModalActive} message={message}/>
     </ElementListStyle>
   );
 };

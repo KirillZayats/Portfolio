@@ -70,10 +70,6 @@ const ContainerButtons = styled.div`
   gap: 20px;
 `;
 
-const LinkButtonStyle = styled(Link)`
-  width: 100%;
-`;
-
 const ButtonStyle = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.MARKER_COLOR};
   max-width: 170px;
@@ -101,5 +97,4 @@ export {
     CardStyle,
     ContainerButtons,
     ButtonStyle,
-    LinkButtonStyle
 }
