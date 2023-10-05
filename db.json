@@ -14,20 +14,28 @@
                 {
                     "name": "",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["", "", "", "", ""],
+                    "link-git": "",
+                    "link-site": ""
                 },
                 {
                     "name": "",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["", "", "", "", ""],
+                    "link-git": "",
+                    "link-site": ""
                 },                {
                     "name": "",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["", "", "", "", ""],
+                    "link-git": "",
+                    "link-site": ""
                 },                {
                     "name": "",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["", "", "", "", ""],
+                    "link-git": "",
+                    "link-site": ""
                 }
             ],
             "title-small-projects": "small",
@@ -35,12 +43,16 @@
                 {
                     "name": "",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["", "", "", "", ""],
+                    "link-git": "",
+                    "link-site": ""
                 },
                 {
                     "name": "",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["", "", "", "", ""],
+                    "link-git": "",
+                    "link-site": ""
                 }
             ],
             "button-open": "open",
@@ -49,9 +61,9 @@
         "aboutme": {
             "title": "About me",
             "subtitle": "Who am I?",
-            "descriptionMe": ["Я front-end разработчик из Беларуси. По профессии Инженер-программист. Имею опыт больше двух лет в разработке проектов малой и средней сложности. Я человек не конфликтный. Умею работать в команде и легко начинаю диалог.",
-                            "В ближайшее время планирую подтягивать свой английский язык до уровня B1-B2 и изучать новые технологии в сфере Front-end.",
-                        "Через 4-5 лет вижу себя Senior разработчиком."],
+            "descriptionMe": ["I am a front-end developer from Belarus. My profession Software Engineer. My experience in project development is two years. I am not a conflict person. I can work in a team and easily maintain dialogue.",
+                            "In the future I plan to improve my English to level B1-B2 and study new technologies in the Front-end.",
+                        "I see myself as a Senior developer in 4-5 years."],
             "button-more": "Learn more",
             "title-skills": "Skills",
             "titles-skills": ["Languages", "Libraries", "Rest", "Databases", "Tools"],
@@ -86,35 +98,74 @@
             "title-big-projects": "большие",
             "big-projects": [
                 {
-                    "name": "",
+                    "name": "Furniture store",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["JAVASCRIPT", "REACT", "REDUX", "STYLED COMPONENTS"],
+                    "link-git": "",
+                    "link-site": ""
                 },
                 {
-                    "name": "",
+                    "name": "Portfolio",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["TYPESCRIPT", "REACT", "REDUX", "STYLED COMPONENTS"],
+                    "link-git": "",
+                    "link-site": ""
                 },                {
-                    "name": "",
+                    "name": "Organick",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["HTML", "CSS"],
+                    "link-git": "",
+                    "link-site": ""
+                },
+                {
+                    "name": "Zayavki",
+                    "description": "",
+                    "technologies": ["C#", "CSHTML", "MVC", "PL/SQL"],
+                    "link-git": "",
+                    "link-site": ""
                 },                {
-                    "name": "",
+                    "name": "FMP",
                     "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "technologies": ["C#", "CSHTML", "MVC", "PL/SQL"],
+                    "link-git": "",
+                    "link-site": ""
+                },                {
+                    "name": "Perco",
+                    "description": "",
+                    "technologies": ["C#", "PL/SQL", "FIREBIRD"],
+                    "link-git": "",
+                    "link-site": ""
                 }
             ],
             "title-small-projects": "маленькие",
             "small-projects": [
                 {
-                    "name": "",
-                    "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "name": "Startup Landing",
+                    "description": "Верста сайта по макету",
+                    "technologies": ["HTML", "CSS"],
+                    "link-git": "https://github.com/KirillZayats/startup-landing",
+                    "link-site": "https://kirillzayats.github.io/startup-landing/"
                 },
                 {
-                    "name": "",
-                    "description": "",
-                    "technologies": ["", "", "", "", ""]
+                    "name": "Weather",
+                    "description": "Web-приложение прогноза погоды",
+                    "technologies": ["HTML", "SCSS", "JAVASCRIPT", "WEBPACK"],
+                    "link-git": "",
+                    "link-site": ""
+                },
+                {
+                    "name": "BMZ-Scan",
+                    "description": "Работа с данными катушки",
+                    "technologies": ["JAVA"],
+                    "link-git": "",
+                    "link-site": ""
+                },
+                {
+                    "name": "Grafity Portfolio",
+                    "description": "Верста сайта по макету",
+                    "technologies": ["HTML", "CSS"],
+                    "link-git": "https://github.com/KirillZayats/grafity-portfolio",
+                    "link-site": "https://kirillzayats.github.io/gravity-portfolio/"
                 }
             ],
             "button-open": "открыть",
@@ -123,7 +174,7 @@
         "aboutme": {
             "title": "Обо мне",
             "subtitle": "Кто я?",
-            "descriptionMe": ["Я front-end разработчик из Беларуси. По профессии Инженер-программист. Имею опыт больше двух лет в разработке проектов малой и средней сложности. Я человек не конфликтный. Умею работать в команде и легко начинаю диалог.",
+            "descriptionMe": ["Я front-end разработчик из Беларуси. По профессии Инженер-программист. Мой опыт в разработке проектов два года. Я человек не конфликтный. Умею работать в команде и легко поддерживаю диалог.",
                             "В ближайшее время планирую подтягивать свой английский язык до уровня B1-B2 и изучать новые технологии в сфере Front-end.",
                         "Через 4-5 лет вижу себя Senior разработчиком."],
             "button-more": "Узнать больше",
