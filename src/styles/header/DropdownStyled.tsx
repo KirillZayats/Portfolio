@@ -7,7 +7,7 @@ const DropdownStyle = styled.div`
   line-height: normal;
   color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
   position: relative;
-    cursor: pointer;
+  cursor: pointer;
 
   @media ${device.mobileS} {
     font-size: 32px;

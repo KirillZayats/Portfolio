@@ -33,7 +33,6 @@ const Header: React.FC = () => {
     window.scrollTo(0, 0);
     closeSidebar();
     document.querySelector(".active") && document.querySelector(".active")?.classList.remove("active");
-    // e.target.tagName === "SPAN" ? e.target.parentElement.classList.add("active") : e.target.classList.add("active");
     let noActiveContainers = document.querySelectorAll(".no-active");
     if(pathname.includes("works")) {
       noActiveContainers[1].classList.add("active");
@@ -88,7 +87,7 @@ const Header: React.FC = () => {
               }
             </ListNavStyle>
           </NavStyle>
-          <Dropdown />
+          <Dropdown closeSidebar={closeSidebar}/>
         </ContainerStyle>
       </HeaderStyle>
     ) : (
@@ -106,7 +105,7 @@ const Header: React.FC = () => {
                 LINKS_NAV.map((element, index) => (<ElementList key={index} textElement={element[0]} link={element[1]} />))
               }
             </ListNavStyle>
-            <Dropdown />
+            <Dropdown closeSidebar={closeSidebar}/>
 
           </NavStyle>
         </ContainerStyle>

@@ -332,6 +332,17 @@ const ContainerBlockColumnStyle = styled.section`
   }
 `;
 
+const ContainerProvider = styled.div``;
+
+const ContainerLoader = styled.div`
+  margin: auto;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
 export {
   SubTitleStyle,
   ContainerTitlePageStyle,
@@ -354,5 +365,7 @@ export {
   ContainerHomePageStyle,
   ContainerPageStyle,
   LinkStyle,
-  IconPhone
+  IconPhone,
+  ContainerProvider,
+  ContainerLoader
 };
