@@ -1,15 +1,15 @@
 import { styled } from "styled-components";
-import { device, size } from "../media/MediaQueryStyled";
+import { device } from "../media/MediaQueryStyled";
 
 const SkillsStyle = styled.section`
   display: flex;
   flex-direction: column;
   @media ${device.mobileS} {
-    gap: 30px;    
+    gap: 30px;
   }
 
   @media ${device.tablet} {
-    gap: 40px;    
+    gap: 40px;
   }
 `;
 const ContainerContentStyle = styled.div`

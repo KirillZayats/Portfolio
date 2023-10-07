@@ -1,16 +1,16 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
-import { device, size } from "../media/MediaQueryStyled";
+import { device } from "../media/MediaQueryStyled";
 
 const ElementListStyle = styled.li``;
 
 const LinkNavStyle = styled(Link)`
-font-style: normal;
-line-height: normal;
-padding: 5px;
-font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  padding: 5px;
+  font-weight: 500;
 
-@media ${device.mobileS} {
+  @media ${device.mobileS} {
     font-size: 32px;
   }
 
@@ -29,11 +29,9 @@ font-weight: 500;
     color: ${({ theme }) => theme.colors.MARKER_COLOR};
   }
 
-&:link {
+  &:link {
     color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
-}
+  }
 `;
 
-export {
-    LinkNavStyle, ElementListStyle
-}
+export { LinkNavStyle, ElementListStyle };

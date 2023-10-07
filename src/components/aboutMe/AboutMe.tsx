@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   MarkedSymbolStyle,
   TitleStyle,
@@ -15,32 +15,50 @@ import {
   AboutMeStyle,
   ContainerTextStyle,
 } from "../../styles/aboutMe/AboutMeStyled";
+import { useSelector } from "react-redux";
+import { TAboutMe } from "../../additionally/interfaces";
 
 const AboutMe = () => {
+  const { name, data } = useSelector((state: any) => state.language);
+  const [dataAboutMe, setDataAboutMe] = useState<TAboutMe>();
+
+  useEffect(() => {
+    if (name) {
+      name === "RU"
+        ? setDataAboutMe(data["0"].Ru.aboutme)
+        : setDataAboutMe(data["0"].En.aboutme);
+    }
+  }, [name]);
+
   return (
     <AboutMeStyle>
       <ContainerInfoMeStyle>
         <TitleBlockStyle>
           <TitleStyle>
-            <MarkedSymbolStyle>#</MarkedSymbolStyle>обо мне
+            <MarkedSymbolStyle>#</MarkedSymbolStyle>
+            {dataAboutMe && dataAboutMe.title}
           </TitleStyle>
           <LineTitleStyle />
         </TitleBlockStyle>
         <ContainerTextStyle>
           <TextStyle>
-            Я front-end разработчик из Беларуси. По профессии
-            Инженер-программист. Имею опыт больше двух лет в разработке
-            проектов малой и средней сложности. Я человек не конфликтный. Умею
-            работать в команде и легко начинаю диалог.
+            {dataAboutMe &&
+              dataAboutMe.descriptionMe.length > 0 &&
+              dataAboutMe.descriptionMe[0]}
           </TextStyle>
           <TextStyle>
-            В ближайшее время планирую подтягивать свой английский язык до
-            уровня B1-B2 и изучать новые технологии в сфере Front-end.
+            {dataAboutMe &&
+              dataAboutMe.descriptionMe.length > 0 &&
+              dataAboutMe.descriptionMe[1]}
           </TextStyle>
-          <TextStyle>Через 4-5 лет вижу себя Senior разработчиком.</TextStyle>
+          <TextStyle>
+            {dataAboutMe &&
+              dataAboutMe.descriptionMe.length > 0 &&
+              dataAboutMe.descriptionMe[2]}
+          </TextStyle>
         </ContainerTextStyle>
-        <LinkStyle to={'/aboutme'}>
-        <ButtonStyle>{"Узнать больше"}</ButtonStyle>
+        <LinkStyle to={"/aboutme"}>
+          <ButtonStyle>{dataAboutMe && dataAboutMe.button_more}</ButtonStyle>
         </LinkStyle>
       </ContainerInfoMeStyle>
       <ContainerPhotoImageStyle>

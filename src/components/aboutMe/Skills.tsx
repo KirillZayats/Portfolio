@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MarkedSymbolStyle,
   TitleStyle,
@@ -12,50 +12,38 @@ import {
 } from "../../styles/aboutMe/SkillsStyled";
 import MainSkills from "../aboutMe/MainSkills";
 import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { TSkills } from "../../additionally/interfaces";
 
 const Skills = () => {
   const { pathname } = useLocation();
+  const { name, data } = useSelector((state: any) => state.language);
+  const [dataSkills, setDataSkills] = useState<TSkills>();
 
-  const massive = [
-    {
-      "title": "Языки",
-      "elements": ["JavaScript", "TypeScript", "C#", "Java", "Python"]
-    },
-    {
-      "title": "Библиотеки",
-      "elements": ["React", "React Router", "Redux"]
-    },
-    {
-      "title": "Остальное",
-      "elements": ["HTML", "CSS", "SCSS", "Styled Components", "Webpack", "React Native", "PyQt5"]
-    },
-    {
-      "title": "БД",
-      "elements": ["MSSQL", "SQlite", "PL/SQL", "MySQL", "PostgreSQL"]
-    },
-    {
-      "title": "Инструменты",
-      "elements": ["VSCode", "Visual Studio", "Git & GitHub", "IntelliJ IDEA", "Android Studio"]
+  useEffect(() => {
+    if (name) {
+      name === "RU"
+        ? setDataSkills(data["0"].Ru.aboutme)
+        : setDataSkills(data["0"].En.aboutme);
     }
-  ];
+  }, [name]);
+
   return (
     <SkillsStyle>
       <TitleBlockStyle>
         <TitleStyle>
-          <MarkedSymbolStyle>#</MarkedSymbolStyle>умения
+          <MarkedSymbolStyle>#</MarkedSymbolStyle>
+          {dataSkills && dataSkills.title_skills}
         </TitleStyle>
         <LineTitleStyle />
       </TitleBlockStyle>
-      {
-        pathname.includes(`aboutme`) &&
-        (
-          <MainSkills />
-        )
-      }
+      {pathname.includes(`aboutme`) && <MainSkills />}
       <ContainerContentStyle>
-        {massive.map((item, index) => (
-          <CardSkill key={index} element={item}/>
-        ))}
+        {dataSkills &&
+          dataSkills.skills.length > 0 &&
+          dataSkills.skills.map((item, index) => (
+            <CardSkill key={index} element={item} />
+          ))}
       </ContainerContentStyle>
     </SkillsStyle>
   );

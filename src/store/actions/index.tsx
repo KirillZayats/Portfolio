@@ -1,6 +1,5 @@
-import * as languageActions from './languageActions';
-
+import * as languageActions from "./languageActions";
 
 export const actions = {
-    ...languageActions
-}
+  ...languageActions,
+};

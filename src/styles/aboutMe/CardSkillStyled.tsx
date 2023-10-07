@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { device, size } from "../media/MediaQueryStyled";
+import { device } from "../media/MediaQueryStyled";
 
 const CardSkillStyle = styled.article`
   width: 100%;

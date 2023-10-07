@@ -46,7 +46,7 @@ const ContainerContactsStyle = styled.div`
 
   @media ${device.tablet} {
     flex-direction: row;
-  justify-content: space-between;
+    justify-content: space-between;
   }
 `;
 
@@ -75,7 +75,7 @@ const TextLinkStyle = styled.span`
   color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
 `;
 const ListLinksStyle = styled.ul`
-max-width: 400px;
+  max-width: 400px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -84,11 +84,8 @@ max-width: 400px;
 
   border-top: 1px solid ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
   padding: 8px;
-
 `;
-const ElementListLinksStyle = styled.li`
-
-`;
+const ElementListLinksStyle = styled.li``;
 
 const LinkSocialStyle = styled.a`
   display: flex;
@@ -96,22 +93,22 @@ const LinkSocialStyle = styled.a`
   gap: 5px;
   align-items: center;
 
-  &:hover path{
+  &:hover path {
     fill: ${({ theme }) => theme.colors.TEXT_COLOR};
   }
-  &:hover span{
+  &:hover span {
     color: ${({ theme }) => theme.colors.TEXT_COLOR};
   }
 `;
 
 export {
-    ListLinksStyle,
-    TextContactsStyle,
-    TextLinkStyle,
-    ContactsStyle,
-    ContainerContactsStyle,
-    ContainerSocialLinksStyle,
-    ElementListLinksStyle,
-    TitleContainerSocialStyle,
-    LinkSocialStyle
-}
+  ListLinksStyle,
+  TextContactsStyle,
+  TextLinkStyle,
+  ContactsStyle,
+  ContainerContactsStyle,
+  ContainerSocialLinksStyle,
+  ElementListLinksStyle,
+  TitleContainerSocialStyle,
+  LinkSocialStyle,
+};

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   MarkedSymbolStyle,
   TitleStyle,
@@ -19,25 +19,46 @@ import {
   ContainerSocialLinksStyle,
   ElementListLinksStyle,
   TitleContainerSocialStyle,
-  LinkSocialStyle
-} from '../../styles/contacts/ContactsStyled'
-import { LINK_DISCORD, LINK_EMAIL, LINK_LINKEDIN, LINK_TELEGRAM, LINK_PHONE } from "../../additionally/constants";
+  LinkSocialStyle,
+} from "../../styles/contacts/ContactsStyled";
+import {
+  LINK_DISCORD,
+  LINK_EMAIL,
+  LINK_LINKEDIN,
+  LINK_TELEGRAM,
+  LINK_PHONE,
+} from "../../additionally/constants";
+import { useSelector } from "react-redux";
+import { TContacts } from "../../additionally/interfaces";
 
 const Contacts = () => {
+  const { name, data } = useSelector((state: any) => state.language);
+  const [dataContacts, setDataContacts] = useState<TContacts>();
+
+  useEffect(() => {
+    if (name) {
+      name === "RU"
+        ? setDataContacts(data["0"].Ru.aboutme)
+        : setDataContacts(data["0"].En.aboutme);
+    }
+  }, [name]);
   return (
     <ContactsStyle>
       <TitleBlockStyle>
         <TitleStyle>
-          <MarkedSymbolStyle>#</MarkedSymbolStyle>контакты
+          <MarkedSymbolStyle>#</MarkedSymbolStyle>
+          {dataContacts && dataContacts.title_contacts}
         </TitleStyle>
         <LineTitleStyle />
       </TitleBlockStyle>
       <ContainerContactsStyle>
         <TextContactsStyle>
-          По любым интересующим вас вопросам можно написать мне. Буду очень рад каждому вашему вопросу :)
+          {dataContacts && dataContacts.message_contacts}
         </TextContactsStyle>
         <ContainerSocialLinksStyle>
-          <TitleContainerSocialStyle>Написать можно здесь</TitleContainerSocialStyle>
+          <TitleContainerSocialStyle>
+            {dataContacts && dataContacts.title_links}
+          </TitleContainerSocialStyle>
           <ListLinksStyle>
             <ElementListLinksStyle>
               <LinkSocialStyle href={LINK_EMAIL} target="_blank">

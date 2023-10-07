@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, useState } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { Theme } from "./styles/Theme";
 import {
   ContainerLoader,
@@ -8,7 +8,6 @@ import {
 import { Route, Routes } from "react-router-dom";
 import { InfinitySpin } from "react-loader-spinner";
 import { useAction } from "./store/hooks/useAction";
-import { useSelector } from "react-redux";
 
 const Header = lazy(() => import("./components/header/Header"));
 const Footer = lazy(() => import("./components/footer/Footer"));

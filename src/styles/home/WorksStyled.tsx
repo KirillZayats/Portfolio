@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { device, size } from "../media/MediaQueryStyled";
+import { device } from "../media/MediaQueryStyled";
 import { Link } from "react-router-dom";
 
 const WorksStyle = styled.section`
@@ -26,13 +26,14 @@ const LinkViewAllStyle = styled(Link)`
   font-weight: 500;
   line-height: normal;
   padding: 8px;
-&:link, &:visited {
+  &:link,
+  &:visited {
     color: ${({ theme }) => theme.colors.TEXT_COLOR};
-}
+  }
 
-&:hover {
+  &:hover {
     color: ${({ theme }) => theme.colors.MARKER_COLOR};
-  } 
+  }
 `;
 
 const ListWorksStyle = styled.ul`
@@ -52,7 +53,7 @@ const ListWorksStyle = styled.ul`
     gap: 33px;
   }
   @media ${device.desktop} {
-    gap: 57px;
+    gap: 56px;
   }
 `;
 const ElementListStyle = styled.li`
@@ -66,13 +67,7 @@ const TitleWorkStyle = styled.h4`
   font-weight: 500;
   line-height: normal;
 `;
-const TextStyle = styled.p`
-  color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-`;
+
 const ButtonOpenStyle = styled.button`
   width: 110px;
   height: 37px;
@@ -97,8 +92,8 @@ const ContainerInfoStyle = styled.div`
 const ElementTechnologyStyle = styled.li``;
 
 const ContainerLinkUpStyle = styled.div`
-    @media ${device.mobileS} {
-      display: none;
+  @media ${device.mobileS} {
+    display: none;
   }
 
   @media ${device.tablet} {

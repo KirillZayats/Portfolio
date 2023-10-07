@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { device, size } from "../media/MediaQueryStyled";
+import { device } from "../media/MediaQueryStyled";
 
 const FactsStyle = styled.section`
   display: flex;
@@ -28,9 +28,4 @@ const TextElementStyle = styled.p`
   color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
 `;
 
-export {
-    TextElementStyle,
-    ElementListStyle,
-    ListFactsStyle,
-    FactsStyle
-}
+export { TextElementStyle, ElementListStyle, ListFactsStyle, FactsStyle };

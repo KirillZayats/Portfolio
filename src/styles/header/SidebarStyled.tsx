@@ -7,7 +7,7 @@ const SidebarStyle = styled.label`
   z-index: 999;
   top: 0px;
   cursor: pointer;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 `;
 
 const SidebarElementsstyle = styled.label`
@@ -19,7 +19,6 @@ const SidebarElementsstyle = styled.label`
   gap: 4px;
   margin: 6px auto;
   cursor: pointer;
-
 `;
 
 const InputCheckBoxStyle = styled.input`

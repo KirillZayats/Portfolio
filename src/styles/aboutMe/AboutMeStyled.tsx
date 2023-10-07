@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { device, size } from "../media/MediaQueryStyled";
+import { device } from "../media/MediaQueryStyled";
 
 const AboutMeStyle = styled.section`
   display: flex;
@@ -52,12 +52,10 @@ const TextStyle = styled.p`
 
   @media ${device.mobileS} {
     font-size: 14px;
-
   }
 
   @media ${device.tabletS} {
     font-size: 16px;
-
   }
 `;
 
@@ -65,7 +63,6 @@ const ContainerPhotoImageStyle = styled.div`
   background: #000;
   display: flex;
   align-items: center;
-
 `;
 const PhotoImageStyle = styled.img`
   @media ${device.mobileS} {
@@ -95,10 +92,10 @@ const PhotoImageStyle = styled.img`
 `;
 
 export {
-    PhotoImageStyle,
-    ContainerInfoMeStyle,
-    ContainerPhotoImageStyle,
-    TextStyle,
-    AboutMeStyle,
-    ContainerTextStyle
-}
+  PhotoImageStyle,
+  ContainerInfoMeStyle,
+  ContainerPhotoImageStyle,
+  TextStyle,
+  AboutMeStyle,
+  ContainerTextStyle,
+};

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logotype from "../Logotype";
 import {
   IconGithub,
@@ -16,11 +16,28 @@ import {
   TextFooterStyle,
   FooterStyle,
   ContainerStyle,
-  LinkIconStyle
+  LinkIconStyle,
 } from "../../styles/footer/FooterStyled";
-import { LINK_GITHUB, LINK_LINKEDIN, LINK_TELEGRAM } from "../../additionally/constants";
+import {
+  LINK_GITHUB,
+  LINK_LINKEDIN,
+  LINK_TELEGRAM,
+} from "../../additionally/constants";
+import { useSelector } from "react-redux";
+import { TFooter } from "../../additionally/interfaces";
 
 const Footer: React.FC = () => {
+  const { name, data } = useSelector((state: any) => state.language);
+  const [dataFooter, setDataFooter] = useState<TFooter>();
+
+  useEffect(() => {
+    if (name) {
+      name === "RU"
+        ? setDataFooter(data["0"].Ru.footer)
+        : setDataFooter(data["0"].En.footer);
+    }
+  }, [name]);
+
   return (
     <FooterStyle>
       <ContainerStyle>
@@ -28,16 +45,18 @@ const Footer: React.FC = () => {
           <ContainerInfoStyle>
             <Logotype />
             <TextFooterStyle>
-              Разработал web-приложение Заяц Кирилл. <NewLineStyle /> Email:
-              kirill.zayats.99@mail.ru
+              {dataFooter && dataFooter.developer_text}
+              <NewLineStyle /> Email: kirill.zayats.99@mail.ru
             </TextFooterStyle>
             <TextFooterStyle>
-              Разработал web-дизайн Elias <NewLineStyle /> Email:
-              elias@elias-dev.ml
+              {dataFooter && dataFooter.design_text}
+              <NewLineStyle /> Email: elias@elias-dev.ml
             </TextFooterStyle>
           </ContainerInfoStyle>
           <ContainerMediaStyle>
-            <TitleContainerMediaStyle>Медиа</TitleContainerMediaStyle>
+            <TitleContainerMediaStyle>
+              {dataFooter && dataFooter.media}
+            </TitleContainerMediaStyle>
             <ContainerIconsLinkStyle>
               <LinkIconStyle href={LINK_LINKEDIN} target="_blank">
                 <IconLinkedin />
@@ -52,7 +71,7 @@ const Footer: React.FC = () => {
           </ContainerMediaStyle>
         </ContainerMainFooterStyle>
         <TextCopyrightStyle>
-          © Все права защищены 2023. Сделал Заяц Кирилл
+          {dataFooter && dataFooter.text_copyright}
         </TextCopyrightStyle>
       </ContainerStyle>
     </FooterStyle>

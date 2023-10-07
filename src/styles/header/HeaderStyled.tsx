@@ -5,7 +5,7 @@ import { LogotypeStyle } from "../AppStyled";
 
 const NavStyle = styled.nav`
   margin-left: auto;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -35,17 +35,16 @@ const NavStyle = styled.nav`
 const ListNavStyle = styled.ul`
   display: flex;
 
-
   @media ${device.mobileS} {
     flex-direction: column;
     justify-content: space-between;
-  gap: 32px;
+    gap: 32px;
   }
 
   @media ${device.laptop} {
     justify-content: space-between;
     flex-direction: row;
-  gap: 32px;
+    gap: 32px;
   }
 `;
 
@@ -54,7 +53,6 @@ const HeaderStyle = styled.header`
   width: 100%;
   position: fixed;
   z-index: 999;
-
 `;
 
 const ContainerStyle = styled.div`
@@ -115,9 +113,4 @@ const ContainerStyle = styled.div`
   }
 `;
 
-export {
-  ContainerStyle,
-  HeaderStyle,
-  NavStyle,
-  ListNavStyle,
-};
+export { ContainerStyle, HeaderStyle, NavStyle, ListNavStyle };

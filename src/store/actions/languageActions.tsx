@@ -1,47 +1,44 @@
 import { firebaseConfig } from "../../utils/db";
-import { CHANGE_LANGUAGE, LOAD_DATA } from "../types/types"
+import { CHANGE_LANGUAGE, LOAD_DATA } from "../types/types";
 import { getDatabase, ref, get, child } from "firebase/database";
 import { initializeApp } from "firebase/app";
 
-
-
 export const loadDataLanguage = (data: any) => {
-   return {
+  return {
     type: LOAD_DATA,
     data,
-    isLoading: true
-   }
-}
+    isLoading: true,
+  };
+};
 
 export const saveLanguage = (value: string) => {
-    return {
-        type: CHANGE_LANGUAGE,
-        payload: value
-       }
-}
+  return {
+    type: CHANGE_LANGUAGE,
+    payload: value,
+  };
+};
 
 export const loadData = () => {
-    
-    initializeApp(firebaseConfig);
+  initializeApp(firebaseConfig);
 
-    let data: any = [];
+  let data: any = [];
 
-    const dbRef = ref(getDatabase());
+  const dbRef = ref(getDatabase());
 
-    return async (dispatch: any) => {
-      get(child(dbRef, `/`))
-        .then((snapshot) => {
-          if (snapshot.exists()) {
-            data.push(snapshot.val());
-          } else {
-            console.log("No data available");
-          }
-        })
-        .then(() => {            
-            dispatch(loadDataLanguage(data));
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    };
+  return async (dispatch: any) => {
+    get(child(dbRef, `/`))
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          data.push(snapshot.val());
+        } else {
+          console.log("No data available");
+        }
+      })
+      .then(() => {
+        dispatch(loadDataLanguage(data));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
+};

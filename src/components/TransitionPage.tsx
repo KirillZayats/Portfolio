@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { SwitchTransition, Transition } from 'react-transition-group';
-import { useLocation } from 'react-router-dom';
-import gsap from 'gsap-trial';
+import { SwitchTransition, Transition } from "react-transition-group";
+import { useLocation } from "react-router-dom";
+import gsap from "gsap-trial";
 
 const TransitionPage = ({ children }: any) => {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <SwitchTransition>
