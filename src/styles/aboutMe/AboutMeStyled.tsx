@@ -60,11 +60,11 @@ const TextStyle = styled.p`
 `;
 
 const ContainerPhotoImageStyle = styled.div`
-  background: #000;
   display: flex;
   align-items: center;
 `;
 const PhotoImageStyle = styled.img`
+  object-fit: cover;
   @media ${device.mobileS} {
     width: 100%;
     height: 350px;

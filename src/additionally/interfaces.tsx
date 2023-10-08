@@ -46,6 +46,7 @@ export type TContacts = {
 export type TAboutMe = {
   title: string;
   subtitle: string;
+  my_photo: string;
   descriptionMe: string[];
   button_more: string;
 };
@@ -71,6 +72,7 @@ export type TWorks = {
   button_open: string;
   button_details: string;
   link_all_projects: string;
+  button_hidden: string;
 };
 
 export type TWork = {
@@ -80,4 +82,10 @@ export type TWork = {
   link_git: string;
   link_site: string;
   images: string[];
+  title_aim: string;
+  aim: string;
+  title_requirements: string;
+  requirements: string;
+  year_created: string;
+  title_year: string;
 };

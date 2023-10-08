@@ -53,6 +53,7 @@ const Works = () => {
                 project={item}
                 text_button_open={dataWorks.button_open}
                 text_button_details={dataWorks.button_details}
+                text_button_hidden={dataWorks.button_hidden}
               />
             ))}
         </ListWorksStyle>
@@ -70,12 +71,13 @@ const Works = () => {
             dataWorks.big_projects.length > 0 &&
             dataWorks.small_projects.map(
               (item, index) =>
-                index < 3 && (
+                (
                   <Work
                     key={`work_small_${index}`}
                     project={item}
                     text_button_open={dataWorks.button_open}
                     text_button_details={dataWorks.button_details}
+                    text_button_hidden={dataWorks.button_hidden}
                   />
                 )
             )}

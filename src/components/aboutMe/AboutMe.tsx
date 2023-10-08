@@ -62,7 +62,7 @@ const AboutMe = () => {
         </LinkStyle>
       </ContainerInfoMeStyle>
       <ContainerPhotoImageStyle>
-        <PhotoImageStyle />
+        <PhotoImageStyle src={dataAboutMe && dataAboutMe.my_photo}/>
       </ContainerPhotoImageStyle>
     </AboutMeStyle>
   );

@@ -52,7 +52,7 @@ const AboutMe: React.FC = () => {
       </ContainerTitlePageStyle>
       <AboutMeStyle>
         <ContainerPhotoImageStyle>
-          <PhotoImageStyle />
+          <PhotoImageStyle src={dataAboutMe && dataAboutMe.my_photo}/>
         </ContainerPhotoImageStyle>
         <ContainerTextPageStyle>
           <TextStyle>

@@ -56,6 +56,7 @@ const Works = () => {
                   project={item}
                   text_button_open={dataWorks.button_open}
                   text_button_details={dataWorks.button_details}
+                  text_button_hidden={dataWorks.button_hidden}
                 />
               )
           )}

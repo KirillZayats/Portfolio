@@ -116,10 +116,78 @@ const ButtonStyle = styled.button`
   }
 `;
 
-const CardStyle = styled.article``;
+const CardStyle = styled.article`
+
+  .hidden_container {
+    padding: 0px;
+    visibility: hidden;
+    height: 0px;
+    opacity: 0;
+    transition: all 1.2s ease;
+    p, h5, div {
+      height: 0px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+  }
+
+  .active_container {
+    padding: 16px;
+    visibility: visible;
+    height: 100%;
+    opacity: 1;
+    transition: all 1.2s ease;
+
+    p, h5, div {
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+`;
 
 const LinkStyle = styled.a`
   width: 100%;
+`;
+
+const ContainerDetailsStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 1.2s ease;
+`;
+const ContainerDetailsBlockStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 1.2s ease;
+
+`;
+
+const TitleBlockDetailsStyle = styled.h5`
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: all 1.2s ease;
+
+`;
+
+const DescriptionBlockDetailsStyle = styled.p`
+  color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 1.2s ease;
+
+`;
+
+const ContainerYearStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 `;
 export {
   ContainerInfoStyle,
@@ -134,4 +202,9 @@ export {
   ButtonStyle,
   ImageWorkStyle,
   LinkStyle,
+  ContainerDetailsStyle,
+  DescriptionBlockDetailsStyle,
+  TitleBlockDetailsStyle,
+  ContainerDetailsBlockStyle,
+  ContainerYearStyle
 };
