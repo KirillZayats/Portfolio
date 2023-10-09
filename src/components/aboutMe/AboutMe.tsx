@@ -31,7 +31,7 @@ const AboutMe = () => {
   }, [name]);
 
   return (
-    <AboutMeStyle>
+    <AboutMeStyle >
       <ContainerInfoMeStyle>
         <TitleBlockStyle>
           <TitleStyle>
@@ -62,7 +62,7 @@ const AboutMe = () => {
         </LinkStyle>
       </ContainerInfoMeStyle>
       <ContainerPhotoImageStyle>
-        <PhotoImageStyle src={dataAboutMe && dataAboutMe.my_photo}/>
+          <PhotoImageStyle src={dataAboutMe && dataAboutMe.my_photo} className="my-photo" alt="my photo" title="my photo" />
       </ContainerPhotoImageStyle>
     </AboutMeStyle>
   );

@@ -8,11 +8,13 @@ import {
   SubTitleStyle,
   ContainerTitlePageStyle,
   ContainerBlockColumnStyle,
+  ContainerProvider,
 } from "../styles/AppStyled";
 import Work from "../components/works/Work";
 import { ListWorksStyle } from "../styles/home/WorksStyled";
 import { useSelector } from "react-redux";
 import { TWorks } from "../additionally/interfaces";
+import Footer from "../components/footer/Footer";
 
 const Works = () => {
   const { name, data } = useSelector((state: any) => state.language);
@@ -25,7 +27,9 @@ const Works = () => {
         : setDataWorks(data["0"].En.projects);
     }
   }, [name]);
+
   return (
+    <ContainerProvider id="works">
     <ContainerPageStyle>
       <ContainerTitlePageStyle>
         <TitleBlockStyle>
@@ -84,6 +88,9 @@ const Works = () => {
         </ListWorksStyle>
       </ContainerBlockColumnStyle>
     </ContainerPageStyle>
+    <Footer/>
+    </ContainerProvider>
+
   );
 };
 

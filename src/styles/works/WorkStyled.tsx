@@ -37,6 +37,7 @@ const ContainerImageWorkStyle = styled.div`
     transition: all 1.4s ease-in-out;
     transition-duration: 500ms !important;
     cursor: pointer;
+    z-index: 1;
   }
 
   .swiper-pagination {
@@ -151,44 +152,6 @@ const LinkStyle = styled.a`
   width: 100%;
 `;
 
-const ContainerDetailsStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: all 1.2s ease;
-`;
-const ContainerDetailsBlockStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transition: all 1.2s ease;
-
-`;
-
-const TitleBlockDetailsStyle = styled.h5`
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  transition: all 1.2s ease;
-
-`;
-
-const DescriptionBlockDetailsStyle = styled.p`
-  color: ${({ theme }) => theme.colors.SECOND_TEXT_COLOR};
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  transition: all 1.2s ease;
-
-`;
-
-const ContainerYearStyle = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-`;
 export {
   ContainerInfoStyle,
   TextStyle,
@@ -202,9 +165,4 @@ export {
   ButtonStyle,
   ImageWorkStyle,
   LinkStyle,
-  ContainerDetailsStyle,
-  DescriptionBlockDetailsStyle,
-  TitleBlockDetailsStyle,
-  ContainerDetailsBlockStyle,
-  ContainerYearStyle
 };

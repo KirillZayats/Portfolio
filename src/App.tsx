@@ -63,7 +63,6 @@ const App = () => {
               }
             />
           </Routes>
-          <Footer />
           <DownUp />
         </ContainerProvider>
       </Suspense>

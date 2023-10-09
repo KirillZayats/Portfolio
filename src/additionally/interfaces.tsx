@@ -7,10 +7,18 @@ export interface PropsElementList {
   link: string;
 }
 
-export interface PropsModal {
+export interface IPropsModal {
   active: boolean;
   setActive: Function;
-  message: string;
+  details: TWork;
+  text_button_hidden: string;
+}
+
+export interface IPropsWork {
+  project: TWork;
+  text_button_open: string;
+  text_button_details: string;
+  text_button_hidden: string;
 }
 
 export interface SvgIcon {

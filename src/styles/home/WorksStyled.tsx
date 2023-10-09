@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const WorksStyle = styled.section`
   display: flex;
   flex-direction: column;
-  z-index: 0;
   @media ${device.mobileS} {
     gap: 30px;
   }

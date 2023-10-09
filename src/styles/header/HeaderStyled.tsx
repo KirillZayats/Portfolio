@@ -52,7 +52,7 @@ const HeaderStyle = styled.header`
   margin: 0 auto;
   width: 100%;
   position: fixed;
-  z-index: 999;
+  z-index: 2;
 `;
 
 const ContainerStyle = styled.div`
@@ -109,7 +109,7 @@ const ContainerStyle = styled.div`
   }
 
   ${LogotypeStyle} {
-    z-index: 999;
+    z-index: 2;
   }
 `;
 

@@ -6,6 +6,7 @@ import {
   ContainerPageStyle,
   SubTitleStyle,
   ContainerTitlePageStyle,
+  ContainerProvider,
 } from "../styles/AppStyled";
 import {
   PhotoImageStyle,
@@ -19,6 +20,7 @@ import { styled } from "styled-components";
 import FactsMe from "../components/aboutMe/FactsMe";
 import { useSelector } from "react-redux";
 import { TAboutMe } from "../additionally/interfaces";
+import Footer from "../components/footer/Footer";
 
 const ContainerTextPageStyle = styled.div`
   max-width: 650px;
@@ -40,42 +42,45 @@ const AboutMe: React.FC = () => {
     }
   }, [name]);
   return (
-    <ContainerPageStyle>
-      <ContainerTitlePageStyle>
-        <TitleBlockStyle>
-          <TitleStyle>
-            <MarkedSymbolStyle>/</MarkedSymbolStyle>
-            {dataAboutMe && dataAboutMe.title}
-          </TitleStyle>
-        </TitleBlockStyle>
-        <SubTitleStyle>{dataAboutMe && dataAboutMe.subtitle}</SubTitleStyle>
-      </ContainerTitlePageStyle>
-      <AboutMeStyle>
-        <ContainerPhotoImageStyle>
-          <PhotoImageStyle src={dataAboutMe && dataAboutMe.my_photo}/>
-        </ContainerPhotoImageStyle>
-        <ContainerTextPageStyle>
-          <TextStyle>
-            {dataAboutMe &&
-              dataAboutMe.descriptionMe.length > 0 &&
-              dataAboutMe.descriptionMe[0]}
-          </TextStyle>
-          <TextStyle>
-            {dataAboutMe &&
-              dataAboutMe.descriptionMe.length > 0 &&
-              dataAboutMe.descriptionMe[1]}
-          </TextStyle>
-          <TextStyle>
-            {dataAboutMe &&
-              dataAboutMe.descriptionMe.length > 0 &&
-              dataAboutMe.descriptionMe[2]}{" "}
-          </TextStyle>
-        </ContainerTextPageStyle>
-      </AboutMeStyle>
-      <Skills />
-      <FactsMe />
-      <Contacts />
-    </ContainerPageStyle>
+    <ContainerProvider>
+      <ContainerPageStyle>
+        <ContainerTitlePageStyle>
+          <TitleBlockStyle>
+            <TitleStyle>
+              <MarkedSymbolStyle>/</MarkedSymbolStyle>
+              {dataAboutMe && dataAboutMe.title}
+            </TitleStyle>
+          </TitleBlockStyle>
+          <SubTitleStyle>{dataAboutMe && dataAboutMe.subtitle}</SubTitleStyle>
+        </ContainerTitlePageStyle>
+        <AboutMeStyle>
+          <ContainerPhotoImageStyle>
+            <PhotoImageStyle className="my-photo" src={dataAboutMe && dataAboutMe.my_photo} alt="my photo" title="my photo"/>
+          </ContainerPhotoImageStyle>
+          <ContainerTextPageStyle>
+            <TextStyle>
+              {dataAboutMe &&
+                dataAboutMe.descriptionMe.length > 0 &&
+                dataAboutMe.descriptionMe[0]}
+            </TextStyle>
+            <TextStyle>
+              {dataAboutMe &&
+                dataAboutMe.descriptionMe.length > 0 &&
+                dataAboutMe.descriptionMe[1]}
+            </TextStyle>
+            <TextStyle>
+              {dataAboutMe &&
+                dataAboutMe.descriptionMe.length > 0 &&
+                dataAboutMe.descriptionMe[2]}{" "}
+            </TextStyle>
+          </ContainerTextPageStyle>
+        </AboutMeStyle>
+        <Skills />
+        <FactsMe />
+        <Contacts />
+      </ContainerPageStyle>
+      <Footer />
+    </ContainerProvider>
   );
 };
 
