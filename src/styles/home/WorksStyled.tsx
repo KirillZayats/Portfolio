@@ -91,17 +91,18 @@ const ContainerInfoStyle = styled.div`
 const ElementTechnologyStyle = styled.li``;
 
 const ContainerLinkUpStyle = styled.div`
+align-items: center;
   @media ${device.mobileS} {
     display: none;
   }
 
   @media ${device.tablet} {
-    display: block;
+    display: flex;
   }
 `;
 const ContainerLinkDownStyle = styled.div`
   @media ${device.mobileS} {
-    display: block;
+    display: flex;
     text-align: center;
   }
 

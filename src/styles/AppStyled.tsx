@@ -1,7 +1,45 @@
-import { styled, createGlobalStyle } from "styled-components";
+import { styled, createGlobalStyle, keyframes } from "styled-components";
 import Icon from "../styles/Icon";
 import { device, size } from "../styles/media/MediaQueryStyled";
 import { Link } from "react-router-dom";
+
+const Swing = keyframes`
+    20% { transform: rotate(10deg); } 
+    40% { transform: rotate(-7deg); } 
+    60% { transform: rotate(3deg); } 
+    80% { transform: rotate(-3deg); } 
+    100% { transform: rotate(0deg); } 
+`;
+
+const Scale = keyframes`
+    0% {
+          transform: scale(1);
+
+    }
+      50% {
+          transform: scale(1.1);
+      }
+
+      100% {
+          transform: scale(1);
+      }
+  
+`;
+
+const ScaleLink = keyframes`
+    0% {
+          transform: scale(1);
+
+    }
+      50% {
+          transform: scale(1.05);
+      }
+
+      100% {
+          transform: scale(1);
+      }
+  
+`;
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -39,6 +77,7 @@ line-height: normal;
   }
 
   a {
+    display: inline-block;
     text-decoration: none;
   }
 
@@ -54,6 +93,16 @@ line-height: normal;
     transition: all .4s ease;
   }
 
+  svg:hover, li:hover svg, header a:hover svg, footer a:hover svg {
+    animation: ${Swing} .5s ease-in;  
+  }
+
+  button:active, #down-up:active {
+    animation: ${Scale} .1s ease-in;  
+  }
+  a:active {
+    animation: ${ScaleLink} .3s ease-in;  
+  }
 `;
 
 const MarkedSymbolStyle = styled.span`

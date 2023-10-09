@@ -77,7 +77,13 @@ const TitleSectionStyle = styled.h5`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+`;
 
+const TitleModalStyle = styled.h4`
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 `;
 
 const TextSectionStyle = styled.p`
@@ -138,5 +144,6 @@ export { ContainerModalStyle,
   ButtonStyle,
   FooterModalStyle,
   ContainerButtons,
-  LinkStyle
+  LinkStyle,
+  TitleModalStyle
  };

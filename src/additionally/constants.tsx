@@ -1,4 +1,4 @@
-export const MAIN_SKILLS = [['HTML', 80], ['CSS', 75], ['JS', 50], ['REACT', 40], ['REDUX', 30], ['TS', 15]];
+export const MAIN_SKILLS = [['HTML', 70], ['CSS', 65], ['JS', 50], ['REACT', 40], ['REDUX', 30], ['TS', 15]];
 export const FIELD_LANGUAGE = 'language';
 
 export const LINK_LINKEDIN = 'https://www.linkedin.com/feed/';
