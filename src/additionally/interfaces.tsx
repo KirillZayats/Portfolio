@@ -7,6 +7,14 @@ export interface PropsElementList {
   link: string;
 }
 
+export interface ILanguage {
+  name: string;
+  isLoading: boolean;
+  data: Object;
+  payload: string;
+  type: string;
+}
+
 export interface IPropsModal {
   active: boolean;
   setActive: Function;
@@ -21,13 +29,16 @@ export interface IPropsWork {
   text_button_hidden: string;
 }
 
-export interface SvgIcon {
-  className?: SVGAnimatedString;
+export interface ICardSkill {
+  key: number;
+  element: {
+    title: string;
+    elements: string[];
+  };
 }
 
-export interface Skill {
-  title: string;
-  elements: [];
+export interface SvgIcon {
+  className?: SVGAnimatedString;
 }
 
 export type TDescription = {

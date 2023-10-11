@@ -1,18 +1,18 @@
-import React from "react";
+import {useEffect} from "react";
 import {
   ElementListStyle,
   ListElementsStyle,
   NameContainerStyle,
   CardSkillStyle,
 } from "../../styles/aboutMe/CardSkillStyled";
-import { Skill } from "../../additionally/interfaces";
+import { ICardSkill } from "../../additionally/interfaces";
 
-const CardSkill = ({ element }: any) => {
+const CardSkill = ({ element }: ICardSkill) => {
   return (
     <CardSkillStyle>
       <NameContainerStyle>{element.title}</NameContainerStyle>
       <ListElementsStyle>
-        {element.elements.map((item: any, index: any) => (
+        {element.elements.map((item: string, index: number) => (
           <ElementListStyle key={index}>{item}</ElementListStyle>
         ))}
       </ListElementsStyle>
