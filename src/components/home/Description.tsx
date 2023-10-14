@@ -8,11 +8,11 @@ import {
 } from "../../styles/home/DescriptionStyled";
 import { MarkedSymbolStyle, ButtonStyle } from "../../styles/AppStyled";
 import { LINK_EMAIL } from "../../additionally/constants";
-import { useSelector } from "react-redux";
 import { TDescription } from "../../additionally/interfaces";
+import { userTypeSelector } from "../../store/hooks/userTypeSelector";
 
-const Description: React.FC = () => {
-  const { name, data } = useSelector((state: any) => state.language);
+const Description = () => {
+  const { name, data } = userTypeSelector((state: any) => state.language);
   const [dataDescription, setDataDescription] = useState<TDescription>();
   useEffect(() => {
     if (name) {

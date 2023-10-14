@@ -12,12 +12,12 @@ import {
 } from "../../styles/aboutMe/SkillsStyled";
 import MainSkills from "../aboutMe/MainSkills";
 import { useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { TSkills } from "../../additionally/interfaces";
+import { userTypeSelector } from "../../store/hooks/userTypeSelector";
 
 const Skills = () => {
   const { pathname } = useLocation();
-  const { name, data } = useSelector((state: any) => state.language);
+  const { name, data } = userTypeSelector((state: any) => state.language);
   const [dataSkills, setDataSkills] = useState<TSkills>();
 
   useEffect(() => {

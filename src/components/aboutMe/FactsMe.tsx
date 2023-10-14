@@ -11,11 +11,11 @@ import {
   ListFactsStyle,
   FactsStyle,
 } from "../../styles/aboutMe/FactsMeStyled";
-import { useSelector } from "react-redux";
 import { TFacts } from "../../additionally/interfaces";
+import { userTypeSelector } from "../../store/hooks/userTypeSelector";
 
 const FactsMe = () => {
-  const { name, data } = useSelector((state: any) => state.language);
+  const { name, data } = userTypeSelector((state: any) => state.language);
   const [dataFacts, setDataFacts] = useState<TFacts>();
 
   useEffect(() => {

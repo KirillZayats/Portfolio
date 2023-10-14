@@ -15,11 +15,11 @@ import {
   AboutMeStyle,
   ContainerTextStyle,
 } from "../../styles/aboutMe/AboutMeStyled";
-import { useSelector } from "react-redux";
 import { TAboutMe } from "../../additionally/interfaces";
+import { userTypeSelector } from "../../store/hooks/userTypeSelector";
 
 const AboutMe = () => {
-  const { name, data } = useSelector((state: any) => state.language);
+  const { name, data } = userTypeSelector((state: any) => state.language);
   const [dataAboutMe, setDataAboutMe] = useState<TAboutMe>();
 
   useEffect(() => {
@@ -50,11 +50,6 @@ const AboutMe = () => {
             {dataAboutMe &&
               dataAboutMe.descriptionMe.length > 0 &&
               dataAboutMe.descriptionMe[1]}
-          </TextStyle>
-          <TextStyle>
-            {dataAboutMe &&
-              dataAboutMe.descriptionMe.length > 0 &&
-              dataAboutMe.descriptionMe[2]}
           </TextStyle>
         </ContainerTextStyle>
         <LinkStyle to={"/aboutme"}>

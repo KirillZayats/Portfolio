@@ -12,12 +12,12 @@ import {
 } from "../styles/AppStyled";
 import Work from "../components/works/Work";
 import { ListWorksStyle } from "../styles/home/WorksStyled";
-import { useSelector } from "react-redux";
 import { TWorks } from "../additionally/interfaces";
 import Footer from "../components/footer/Footer";
+import { userTypeSelector } from "../store/hooks/userTypeSelector";
 
 const Works = () => {
-  const { name, data } = useSelector((state: any) => state.language);
+  const { name, data } = userTypeSelector((state: any) => state.language);
   const [dataWorks, setDataWorks] = useState<TWorks>();
 
   useEffect(() => {

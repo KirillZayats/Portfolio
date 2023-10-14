@@ -23,11 +23,11 @@ import {
   LINK_LINKEDIN,
   LINK_TELEGRAM,
 } from "../../additionally/constants";
-import { useSelector } from "react-redux";
 import { TFooter } from "../../additionally/interfaces";
+import { userTypeSelector } from "../../store/hooks/userTypeSelector";
 
-const Footer: React.FC = () => {
-  const { name, data } = useSelector((state: any) => state.language);
+const Footer = () => {
+  const { name, data } = userTypeSelector((state: any) => state.language);
   const [dataFooter, setDataFooter] = useState<TFooter>();
 
   useEffect(() => {

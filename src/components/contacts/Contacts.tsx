@@ -28,11 +28,11 @@ import {
   LINK_TELEGRAM,
   LINK_PHONE,
 } from "../../additionally/constants";
-import { useSelector } from "react-redux";
 import { TContacts } from "../../additionally/interfaces";
+import { userTypeSelector } from "../../store/hooks/userTypeSelector";
 
 const Contacts = () => {
-  const { name, data } = useSelector((state: any) => state.language);
+  const { name, data } = userTypeSelector((state: any) => state.language);
   const [dataContacts, setDataContacts] = useState<TContacts>();
 
   useEffect(() => {

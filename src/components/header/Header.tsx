@@ -11,14 +11,14 @@ import Sidebar from "./Sidebar";
 import { InputCheckBoxStyle } from "../../styles/header/SidebarStyled";
 import Dropdown from "./Dropdown";
 import { useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { userTypeSelector } from "../../store/hooks/userTypeSelector";
 
-const Header: React.FC = () => {
+const Header = () => {
   const [widthWindow, setWidthWindow] = useState(window.innerWidth);
   const [buttonDownUp, setButtonDownUp] = useState<HTMLElement | null>(null);
   const { pathname } = useLocation();
 
-  const { name, data } = useSelector((state: any) => state.language);
+  const { name, data } = userTypeSelector((state: any) => state.language);
   const [listNav, setListNav] = useState<[]>();
 
   useEffect(() => {

@@ -18,9 +18,9 @@ import Skills from "../components/aboutMe/Skills";
 import Contacts from "../components/contacts/Contacts";
 import { styled } from "styled-components";
 import FactsMe from "../components/aboutMe/FactsMe";
-import { useSelector } from "react-redux";
 import { TAboutMe } from "../additionally/interfaces";
 import Footer from "../components/footer/Footer";
+import { userTypeSelector } from "../store/hooks/userTypeSelector";
 
 const ContainerTextPageStyle = styled.div`
   max-width: 650px;
@@ -31,7 +31,7 @@ const ContainerTextPageStyle = styled.div`
 `;
 
 const AboutMe: React.FC = () => {
-  const { name, data } = useSelector((state: any) => state.language);
+  const { name, data } = userTypeSelector((state: any) => state.language);
   const [dataAboutMe, setDataAboutMe] = useState<TAboutMe>();
 
   useEffect(() => {
@@ -67,11 +67,6 @@ const AboutMe: React.FC = () => {
               {dataAboutMe &&
                 dataAboutMe.descriptionMe.length > 0 &&
                 dataAboutMe.descriptionMe[1]}
-            </TextStyle>
-            <TextStyle>
-              {dataAboutMe &&
-                dataAboutMe.descriptionMe.length > 0 &&
-                dataAboutMe.descriptionMe[2]}{" "}
             </TextStyle>
           </ContainerTextPageStyle>
         </AboutMeStyle>

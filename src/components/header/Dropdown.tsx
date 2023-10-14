@@ -8,11 +8,11 @@ import {
   OptionHidenStyle,
   ArrowStyle,
 } from "../../styles/header/DropdownStyled";
-import { useSelector } from "react-redux";
-import { store } from "../../store";
 import { useAction } from "../../store/hooks/useAction";
+import { userTypeSelector } from "../../store/hooks/userTypeSelector";
+
 const Dropdown = (props: { closeSidebar: Function }) => {
-  const nameLanguage = useSelector((state: any) => state.language.name);
+  const nameLanguage = userTypeSelector((state: any) => state.language.name);
   const { saveLanguage } = useAction();
   const [activeLanguage, setActiveLanguage] = useState("");
   const [hiddenLanguage, setHiddenLanguage] = useState("");
