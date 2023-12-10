@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ElementList from "./ElementList";
 import {
   ContainerStyle,
@@ -17,6 +17,7 @@ const Header = () => {
   const [widthWindow, setWidthWindow] = useState(window.innerWidth);
   const [buttonDownUp, setButtonDownUp] = useState<HTMLElement | null>(null);
   const { pathname } = useLocation();
+  const refIntut = useRef<HTMLInputElement>(null);
 
   const { name, data } = userTypeSelector((state: any) => state.language);
   const [listNav, setListNav] = useState<[]>();
@@ -36,6 +37,7 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWidthWindow(window.innerWidth);
+      toggleScroll();
     });
   }, []);
 
@@ -65,12 +67,17 @@ const Header = () => {
     }
   };
 
-  function closeSidebar() {
-    let inputCheckbox = document.getElementById("checked") as HTMLInputElement;
-    if (window.innerWidth < 1024 && inputCheckbox && inputCheckbox.checked) {
-      inputCheckbox.checked = false;
+  const closeSidebar = () => {
+    if (
+      window.innerWidth < 1024 &&
+      refIntut.current &&
+      refIntut.current?.checked
+    ) {
+      refIntut.current.checked = false;
+      !refIntut.current?.checked &&
+        document.querySelector("body")?.classList.remove("no-scroll");
     }
-  }
+  };
 
   const scrollPage = () => {
     if (window.scrollY >= 500) {
@@ -95,6 +102,20 @@ const Header = () => {
     }
   };
 
+  const toggleScroll = () => {
+    if (widthWindow >= 1024) {
+      document.querySelector("body")?.classList.remove("no-scroll");
+    } else {
+      refIntut.current?.checked
+        ? document.querySelector("body")?.classList.add("no-scroll")
+        : document.querySelector("body")?.classList.remove("no-scroll");
+    }
+  };
+
+  const toggleBurgerMenu = () => {
+    toggleScroll();
+  };
+
   return widthWindow >= 1024 ? (
     <HeaderStyle>
       <ContainerStyle>
@@ -107,6 +128,7 @@ const Header = () => {
                   key={index}
                   textElement={element[0]}
                   link={element[1]}
+                  closeSidebar={closeSidebar}
                 />
               ))}
           </ListNavStyle>
@@ -118,7 +140,12 @@ const Header = () => {
     <HeaderStyle>
       <ContainerStyle>
         <Logotype />
-        <InputCheckBoxStyle type="checkbox" id="checked" />
+        <InputCheckBoxStyle
+          type="checkbox"
+          id="checked"
+          ref={refIntut}
+          onClick={toggleBurgerMenu}
+        />
         <Sidebar />
         <NavStyle>
           <ListNavStyle>
@@ -128,6 +155,7 @@ const Header = () => {
                   key={index}
                   textElement={element[0]}
                   link={element[1]}
+                  closeSidebar={closeSidebar}
                 />
               ))}
           </ListNavStyle>

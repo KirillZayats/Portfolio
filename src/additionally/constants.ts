@@ -1,4 +1,4 @@
-export const MAIN_SKILLS = [['HTML', 70], ['CSS', 65], ['JS', 50], ['REACT', 40], ['REDUX', 30], ['TS', 15]];
+export const MAIN_SKILLS = [['HTML', 70], ['CSS', 65], ['JS', 55], ['REACT', 45], ['REDUX', 40], ['TS', 30]];
 export const FIELD_LANGUAGE = 'language';
 
 export const LINK_LINKEDIN = 'https://www.linkedin.com/in/kiryl-zayats';

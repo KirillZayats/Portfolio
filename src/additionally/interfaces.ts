@@ -5,6 +5,7 @@ export interface PropsTheme {
 export interface PropsElementList {
   textElement: string;
   link: string;
+  closeSidebar: Function;
 }
 
 export interface ILanguage {

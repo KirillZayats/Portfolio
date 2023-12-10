@@ -53,6 +53,8 @@ const GlobalStyle = createGlobalStyle`
     -ms-user-select: none;
     user-select: none; 
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+
   }
 
   body {
@@ -62,7 +64,14 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.TEXT_COLOR};
     font-family: 'Fira Code', sans-serif;
     overflow-x:hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
 
   button {
     font-family: 'Fira Code', sans-serif;
@@ -103,6 +112,10 @@ line-height: normal;
   a:active {
     animation: ${ScaleLink} .3s ease-in;  
   }
+
+  .no-scroll {
+    overflow: hidden;
+  } 
 `;
 
 const MarkedSymbolStyle = styled.span`
